@@ -1,0 +1,25 @@
+.custom-cursor {
+    cursor: pointer;
+    /* or grab, crosshair, etc. */
+}
+
+.width-place {
+    left: 60px
+}
+
+.size {
+    height: 60px;
+    width: 60px;
+    border-radius: 68px;
+
+}
+
+
+  .i-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: 1rem; 
+    cursor: pointer;
+}
+
