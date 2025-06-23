@@ -1,16 +1,18 @@
 .custom-cursor {
     cursor: pointer;
-    /* or grab, crosshair, etc. */
 }
 
 .width-place {
-    left: 60px
+    left: 60px;
+    height: 45px;
+    width:45px;
+    background-color: #ccc;
 }
 
 .size {
-    height: 60px;
-    width: 60px;
-    border-radius: 68px;
+    height: 35px;
+    width: 35px;
+   
 
 }
 
