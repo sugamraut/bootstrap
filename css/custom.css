@@ -1,0 +1,50 @@
+
+.org_name{
+    color: #263238;
+}
+.button{
+    background-color: #4CAF4F;
+    border: 1px;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: #4CAF4F;
+        border: 1px;
+    }
+}
+div{
+    a{
+        color: #18191F;
+        line-height: 24px;
+        font-size: 16px;
+        font-family: inter;
+    }
+}
+.nav-btn {
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-btn.login {
+  color: #198754;
+  background-color: transparent;
+}
+
+.nav-btn.login:hover {
+  background-color: #d1e7dd;
+  border-color: #198754;
+  text-decoration: none;
+}
+
+.nav-btn.signup {
+  color: white;
+  background-color: #198754;
+}
+
+.nav-btn.signup:hover {
+  background-color: #157347;
+  border-color: #145c39;
+  text-decoration: none;
+}
