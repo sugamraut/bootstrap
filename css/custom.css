@@ -1,24 +1,88 @@
-
-.org_name{
+*{
+ font-family: "inter",sans-serif;
+}
+.top-section{
+  background-color: #F5F7FA
+}
+.org-logo {
+  height: 24px;
+  width: 35px;
+  
+}
+.nav-text {
+  color: #18191F;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "inter",sans-serif;
+  gap: 50px;
+}
+.org_name {
     color: #263238;
+    margin-top: 8px !important;
+    font-weight: 700 !important;
+  }
+
+.text-area {
+  padding-left: 144px;
+  padding-right: 144px;
+  padding-bottom: 96px;
+  padding-top: 96px;
+  background-color: #F5F7FA;
+
 }
-.button{
-    background-color: #4CAF4F;
+
+.text{
+  line-height: 76px;
+  font-size: 64px;
+  font-weight: 600;
+  gap: 32px;
+  color: #4D4D4D;
+  
+}
+.text-cont{
+  width: 657px;
+  height: 276px;
+  padding: 0px;
+}
+.highlight-text{
+  color: #4CAF4F;
+}
+p{
+  color: #717171;
+}
+.slider-image{
+  width: 391px;
+}
+.background-col{
+  background-color: #FFFFFF;
+}
+.button-desgin{
+  background-color: #4CAF4F;
+  width: 128px;
+  height: 52px;
+  gap: 14px;
+}
+.button-text{
+  color: #FFFFFF ;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.img-con{
+      padding-left: 349px;
+    padding-right: 260px;
+}
+.button {
+  background-color: #4caf4f;
+  border: 1px;
+}
+.button:hover {
+    background-color: #4caf4f;
     border: 1px;
-    transition: all 0.3s ease;
-    &:hover{
-        background-color: #4CAF4F;
-        border: 1px;
-    }
-}
-div{
-    a{
-        color: #18191F;
-        line-height: 24px;
-        font-size: 16px;
-        font-family: inter;
-    }
-}
+  }
+
 .nav-btn {
   padding: 6px 16px;
   border: 1px solid transparent;
@@ -48,3 +112,5 @@ div{
   border-color: #145c39;
   text-decoration: none;
 }
+
+
