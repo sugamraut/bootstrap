@@ -377,3 +377,270 @@ p {
 }
 
 /*  */
+/* MEDIA QUERY FOR SMALL DEVICES (mobile and small tablets) */
+@media (max-width: 767.98px) {
+  /* General Reset & Typography */
+  body {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .top-section {
+    padding: 10px 16px;
+  }
+
+  /* Navbar Brand */
+  .org-logo {
+    width: 28px;
+    height: auto;
+  }
+
+  .org_name {
+    font-size: 16px !important;
+    margin: 0 !important;
+  }
+
+  /* Navbar Items */
+  .nav-text {
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .nav-text a {
+    margin: 0.5rem 0;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  /* Text Banner Section */
+  .text-area {
+    padding: 32px 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+
+  .highlight-text {
+    font-size: 32px;
+  }
+
+  .slider-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* Button */
+  .button-desgin {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+  }
+
+  /* Client Logos */
+  .img-con {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .img-con img {
+    width: 80px;
+    height: auto;
+    margin: 5px;
+  }
+
+  /* Membership Cards */
+  .card-section {
+    padding: 0 16px;
+  }
+
+  .cards {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .contents {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .image-sec img {
+    max-width: 80px;
+    height: auto;
+  }
+
+  /* Image + Text Block */
+  .password-img,
+  .text-width {
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .password-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Review Section */
+  .review-sec {
+    padding: 32px 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .review-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .stat-value {
+    font-size: 14px;
+    padding-left: 8px;
+  }
+
+  /* Mid-section Testimonial */
+  .middle-section {
+    flex-direction: column;
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .middle-section .row img {
+    margin: 5px;
+    width: 70px;
+  }
+
+  .body-link {
+    position: static;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* Blog Cards Section */
+  .card-custom {
+    margin-bottom: 24px;
+  }
+
+  .content-box {
+    top: -30px;
+    padding: 16px;
+    width: 95%;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .read-more {
+    font-size: 13px;
+  }
+
+  /* Footer CTA */
+  .footer-text {
+    font-size: 32px;
+    line-height: 42px;
+    padding: 0 16px;
+  }
+
+  .foo-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  /* Footer Last Section */
+  .footer-last-sec {
+    padding: 32px 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-last-sec .col-6 {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .foo-sec-text,
+  .foo-subtext {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .foo-heading {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .email-sec {
+    width: 100%;
+    height: 40px;
+    padding-left: 12px;
+  }
+
+  .send {
+    left: 85%;
+    bottom: 10px;
+    width: 20px;
+  }
+
+  /* Adjust margins for spacing harmony */
+  .mt-5 {
+    margin-top: 32px !important;
+  }
+
+  .gap-4 {
+    gap: 16px !important;
+  }
+
+  /* Spacing Helpers */
+  .py-5 {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .px-4 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
