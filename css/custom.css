@@ -2,8 +2,26 @@
   font-family: "inter", sans-serif;
 }
 
+.mouse {
+  cursor: pointer;
+}
+
 .top-section {
   background-color: #F5F7FA
+}
+
+.card-image {
+  height: 286px;
+  width: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: -1;
+
+}
+.cardtext{
+  bottom: 0px;
 }
 
 .org-logo {
@@ -11,6 +29,13 @@
   width: 35px;
 
 }
+
+.body-link {
+  bottom: 14px;
+  left: 480px;
+  color: #4CAF4F;
+}
+
 
 .footer-text {
   background-color: #F5F7FA;
@@ -219,10 +244,9 @@ p {
 }
 
 .card-width {
-  width: 376px;
-  background-color: #F5F7FA;
-  border-radius: 8px;
-  box-shadow: 8px #F5F7FA;
+ height: 200px;
+    background-color: #F5F7FA;
+    border-radius: 8px;
 
 }
 
@@ -236,31 +260,67 @@ p {
 .card-link {
   color: #4CAF4F;
 }
-.footer-text{
+
+.footer-text {
   font-size: 64px;
   line-height: 76px;
   color: #263238;
 }
-.foo-btn{
+
+.foo-btn {
   width: 178px;
-  padding:20px 5px 20px 5px ;
+  padding: 20px 5px 20px 5px;
 
 }
-.footer-last-sec{
+
+.footer-last-sec {
   background-color: #263238;
   padding: 64px 165px 65px 165px;
 }
-.footer_org_name{
+
+.footer_org_name {
   color: #FFFFFF;
 }
-.foo-image{
+
+.foo-image {
   gap: 10px;
 }
-.foo-sec-text{
+
+.foo-sec-text {
   line-height: 20px;
   font-size: 14px;
   color: #F5F7FA;
 }
+
+.foo-heading {
+  color: #FFFFFF;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.foo-subtext {
+  line-height: 20px;
+  font-size: 14px;
+  color: #F5F7FA;
+}
+
+.email-sec {
+  background-color: #ffffff45;
+  width: 255px;
+  height: 40px;
+
+}
+
+.email-sec::placeholder {
+  color: #D9DBE1;
+}
+
+.send {
+  bottom: 10px;
+  left: 220px;
+  cursor: pointer;
+}
+
 .button {
   background-color: #4caf4f;
   border: 1px;
