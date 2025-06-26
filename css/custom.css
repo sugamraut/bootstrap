@@ -12,6 +12,17 @@
 
 }
 
+.footer-text {
+  background-color: #F5F7FA;
+}
+
+.foo-text {
+  color: #263238;
+  font-size: 64px;
+  line-height: 76px;
+
+}
+
 .nav-text {
   color: #18191F;
   line-height: 24px;
@@ -175,17 +186,85 @@ p {
   line-height: 24px;
 }
 
-.stat-icon{ 
-    width: 43px;
-    height: 43px;
+.stat-icon {
+  width: 43px;
+  height: 43px;
 }
-.stat-value{
- padding-left: 10px;
+
+.stat-value {
+  padding-left: 10px;
 }
-   
+
+.Authors {
+  font-size: 20px;
+  line-height: 28px;
+  color: #4CAF4F;
+
+}
+
+.middle-section {
+  gap: 32px;
+  padding-left: 144px;
+  padding-right: 144px;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  background-color: #F5F7FA;
+
+}
+
+.card-sect {
+  width: 368px;
+  height: 196px;
+  padding-left: 144px;
+}
+
+.card-width {
+  width: 376px;
+  background-color: #F5F7FA;
+  border-radius: 8px;
+  box-shadow: 8px #F5F7FA;
+
+}
+
+.card-text-section {
+  line-height: 28px;
+  font-size: 20px;
+  color: #717171;
+
+}
+
+.card-link {
+  color: #4CAF4F;
+}
+.footer-text{
+  font-size: 64px;
+  line-height: 76px;
+  color: #263238;
+}
+.foo-btn{
+  width: 178px;
+  padding:20px 5px 20px 5px ;
+
+}
+.footer-last-sec{
+  background-color: #263238;
+  padding: 64px 165px 65px 165px;
+}
+.footer_org_name{
+  color: #FFFFFF;
+}
+.foo-image{
+  gap: 10px;
+}
+.foo-sec-text{
+  line-height: 20px;
+  font-size: 14px;
+  color: #F5F7FA;
+}
 .button {
   background-color: #4caf4f;
   border: 1px;
+
 }
 
 .button:hover {
