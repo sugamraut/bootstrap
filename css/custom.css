@@ -20,7 +20,8 @@
   z-index: -1;
 
 }
-.cardtext{
+
+.cardtext {
   bottom: 0px;
 }
 
@@ -70,6 +71,13 @@
   padding-top: 96px;
   background-color: #F5F7FA;
 
+}
+.card-section{
+  padding-left: 144px;
+  padding-right: 144px;
+}
+.card-custom{
+  border: none;
 }
 
 .text {
@@ -174,7 +182,6 @@ p {
   border: none;
   background-color: #FFFFFF;
 
-
 }
 
 .password-img {
@@ -227,38 +234,45 @@ p {
 
 }
 
-.middle-section {
-  gap: 32px;
-  padding-left: 144px;
-  padding-right: 144px;
-  padding-bottom: 32px;
-  padding-top: 32px;
-  background-color: #F5F7FA;
-
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-.card-sect {
-  width: 368px;
-  height: 196px;
-  padding-left: 144px;
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.card-width {
- height: 200px;
-    background-color: #F5F7FA;
-    border-radius: 8px;
-
+.content-box {
+  position: relative;
+  top: -40px;
+  /* overlap */
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.card-text-section {
-  line-height: 28px;
-  font-size: 20px;
-  color: #717171;
-
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
-.card-link {
-  color: #4CAF4F;
+.read-more {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
 }
 
 .footer-text {
