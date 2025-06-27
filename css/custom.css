@@ -208,15 +208,13 @@ p {
   padding-left: 144px;
   padding-right: 144px;
 }
+.nav-btn.signup{
+  background-color: #4CAF4F !important;
+}
 
-.stat-icon {
-  width: 43px;
  
-}
 
-.stat-value {
-  padding-left: 10px;
-}
+
 
 .Authors {
   font-size: 20px;
