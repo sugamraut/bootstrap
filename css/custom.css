@@ -376,10 +376,8 @@ p {
   text-decoration: none;
 }
 
-/*  */
-/* MEDIA QUERY FOR SMALL DEVICES (mobile and small tablets) */
 @media (max-width: 767.98px) {
-  /* General Reset & Typography */
+ 
   body {
     font-size: 14px;
     line-height: 20px;
@@ -402,8 +400,6 @@ p {
   .top-section {
     padding: 10px 16px;
   }
-
-  /* Navbar Brand */
   .org-logo {
     width: 28px;
     height: auto;
@@ -414,7 +410,7 @@ p {
     margin: 0 !important;
   }
 
-  /* Navbar Items */
+
   .nav-text {
     flex-direction: column;
     gap: 0;
@@ -431,7 +427,7 @@ p {
     padding: 5px 10px;
   }
 
-  /* Text Banner Section */
+
   .text-area {
     padding: 32px 16px;
     flex-direction: column;
@@ -454,14 +450,14 @@ p {
     margin-top: 20px;
   }
 
-  /* Button */
+
   .button-desgin {
     width: 100%;
     padding: 12px 0;
     font-size: 14px;
   }
 
-  /* Client Logos */
+
   .img-con {
     flex-wrap: wrap;
     justify-content: center;
@@ -475,7 +471,7 @@ p {
     margin: 5px;
   }
 
-  /* Membership Cards */
+
   .card-section {
     padding: 0 16px;
   }
@@ -497,7 +493,7 @@ p {
     height: auto;
   }
 
-  /* Image + Text Block */
+
   .password-img,
   .text-width {
     width: 100%;
@@ -510,7 +506,7 @@ p {
     height: auto;
   }
 
-  /* Review Section */
+ 
   .review-sec {
     padding: 32px 16px;
     flex-direction: column;
@@ -532,7 +528,7 @@ p {
     padding-left: 8px;
   }
 
-  /* Mid-section Testimonial */
+  
   .middle-section {
     flex-direction: column;
     padding: 32px 16px;
@@ -551,7 +547,7 @@ p {
     font-size: 14px;
   }
 
-  /* Blog Cards Section */
+
   .card-custom {
     margin-bottom: 24px;
   }
@@ -570,7 +566,6 @@ p {
     font-size: 13px;
   }
 
-  /* Footer CTA */
   .footer-text {
     font-size: 32px;
     line-height: 42px;
@@ -584,7 +579,7 @@ p {
     margin: 16px 0;
   }
 
-  /* Footer Last Section */
+
   .footer-last-sec {
     padding: 32px 16px;
     flex-direction: column;
@@ -619,7 +614,7 @@ p {
     width: 20px;
   }
 
-  /* Adjust margins for spacing harmony */
+ 
   .mt-5 {
     margin-top: 32px !important;
   }
@@ -628,7 +623,7 @@ p {
     gap: 16px !important;
   }
 
-  /* Spacing Helpers */
+
   .py-5 {
     padding-top: 32px !important;
     padding-bottom: 32px !important;
