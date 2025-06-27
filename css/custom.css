@@ -204,10 +204,14 @@ p {
   font-size: 16px;
   line-height: 24px;
 }
+.Clients{
+  padding-left: 144px;
+  padding-right: 144px;
+}
 
 .stat-icon {
   width: 43px;
-  height: 43px;
+ 
 }
 
 .stat-value {
