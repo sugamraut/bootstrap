@@ -2,10 +2,15 @@
   font-family: "inter", sans-serif;
 }
 
-.mouse {
+.mouse-cursor {
   cursor: pointer;
 }
 
+.padding-style{
+  padding-left: 144px;
+  padding-right: 144px;
+  background-color: #E0E0E0;
+}
 .top-section {
   background-color: #F5F7FA
 }
@@ -47,12 +52,6 @@
   background-color: #F5F7FA;
 }
 
-.foo-text {
-  color: #263238;
-  font-size: 64px;
-  line-height: 76px;
-
-}
 
 .nav-text {
   color: #18191F;
@@ -149,8 +148,8 @@ p {
   font-size: 14px;
 }
 .image-container {
-  padding-left: 349px;
-  padding-right: 260px;
+  padding-left: 144px;
+  padding-right: 144px;
 }
 
 .heading {
@@ -277,7 +276,7 @@ p {
 
 .footer {
   background-color: #263238;
-  padding: 64px 165px 65px 165px;
+  padding: 64px 144px 65px 144px;
 }
 
 .footer-company-name  {
