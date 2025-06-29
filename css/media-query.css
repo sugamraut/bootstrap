@@ -1,0 +1,112 @@
+@media screen and (max-width: 768px) {
+  /* General Reset */
+  .padding-style,
+  .card-section,
+  .middle-sec,
+  .Clients {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  html, body {
+  overflow-x: hidden;
+}
+
+
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+
+  .slider-area {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 48px;
+  }
+
+  .slider-text {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .slider-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .col-6,
+  .col-4 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .cards {
+    width: 100% !important;
+    margin-bottom: 16px;
+  }
+
+  .password-img-style img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .text-width {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 16px;
+    backdrop-filter: blur(2px);
+  }
+
+  .row.middle-sec {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .image-container > div {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer {
+    padding: 32px 16px;
+    text-align: center;
+  }
+
+  .footer .row > div {
+    margin-bottom: 20px;
+  }
+
+  .content-box {
+    top: 0;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .section-text,
+  .footer-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .Authors {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .email-section {
+    width: 100%;
+  }
+
+  .send {
+    left: auto;
+    right: 10px;
+  }
+}
