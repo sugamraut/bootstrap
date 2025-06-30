@@ -3,25 +3,15 @@
 }
 
 .bg-light {
-  background-color: #F5F7FA !important;
+  background-color: #f5f7fa !important;
 }
 
 .mouse-cursor {
   cursor: pointer;
 }
 
-text-width {
+.text-width {
   padding-left: 12px !important;
-}
-
-.padding-style {
-  padding-left: 144px;
-  padding-right: 144px;
-  background-color: #E0E0E0;
-}
-
-.top-section {
-  background-color: #F5F7FA
 }
 
 .card-image {
@@ -30,46 +20,19 @@ text-width {
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: -1;
-
-}
-
-.cardtext {
-  bottom: 0px;
-}
-
-.org-logo {
-  height: 24px;
-  width: 35px;
-
 }
 
 .link {
   bottom: 13px;
   right: 0px;
-  color: #4CAF4F;
+  color: #4caf4f;
 }
 
 .section-text {
   font-size: 64px;
   line-height: 76px;
   color: #263238;
-}
-
-
-.footer-text {
-  background-color: #F5F7FA;
-}
-
-
-.nav-text {
-  color: #18191F;
-  line-height: 24px;
-  font-weight: 500;
-  font-size: 16px;
-  font-family: "inter", sans-serif;
-  gap: 50px;
 }
 
 .Company_name {
@@ -81,24 +44,13 @@ text-width {
 .navbar-list {
   font-size: 16px;
   line-height: 24px;
-  color: #18191F;
-
+  color: #18191f;
 }
 
 .slider-area {
   padding-top: 96px;
   padding-bottom: 66px;
-  background-color: #F5F7FA;
-
-}
-
-.card-section {
-  padding-left: 144px;
-  padding-right: 144px;
-}
-
-.card-custom {
-  border: none;
+  background-color: #f5f7fa;
 }
 
 .slider-text {
@@ -106,18 +58,11 @@ text-width {
   font-size: 64px;
   font-weight: 600;
   gap: 32px;
-  color: #4D4D4D;
-
-}
-
-.text-cont {
-  width: 657px;
-  height: 276px;
-  padding: 0px;
+  color: #4d4d4d;
 }
 
 .highlight-text {
-  color: #4CAF4F;
+  color: #4caf4f;
 }
 
 p {
@@ -130,21 +75,12 @@ p {
   width: 391px;
 }
 
-.controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 20px;
-  flex-direction: column;
-}
-
 .slider-background-color {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .button-design {
-  background-color: #4CAF4F;
+  background-color: #4caf4f;
   width: 128px;
   height: 52px;
   border: none;
@@ -152,22 +88,17 @@ p {
 }
 
 .button-text {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-}
-
-.contents {
-  line-height: 20px;
-  font-size: 14px;
 }
 
 .heading {
   line-height: 44px;
   font-size: 32px;
   font-weight: 600;
-  color: #4D4D4D;
+  color: #4d4d4d;
 }
 
 .heading-text {
@@ -179,21 +110,13 @@ p {
   padding-top: 24px;
   padding-bottom: 24px;
   border: none;
-  background-color: #FFFFFF;
-
+  background-color: #ffffff;
 }
 
 .password-img-style {
   width: 442px;
 }
 
-
-/* .unlock,.community {
-  padding-left: 144px;
-  padding-right: 144px;
-  align-items: center;
-  justify-content: center;
-} */
 .unlock {
   padding-top: 58px !important;
 }
@@ -201,40 +124,23 @@ p {
 .review-section {
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: #F5F7FA;
+  background-color: #f5f7fa;
 }
 
 .review-text {
-  color: #4D4D4D;
+  color: #4d4d4d;
   font-size: 36px;
   line-height: 44px;
-
-}
-
-.review-p {
-  color: #18191F;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.Clients {
-  padding-left: 144px;
-  padding-right: 144px;
 }
 
 .nav-btn.signup {
-  background-color: #4CAF4F !important;
+  background-color: #4caf4f !important;
 }
-
-
-
-
 
 .Authors {
   font-size: 20px;
   line-height: 28px;
-  color: #4CAF4F;
-
+  color: #4caf4f;
 }
 
 .image-wrapper {
@@ -284,29 +190,23 @@ p {
   color: #263238;
 }
 
-.foo-btn {
-  width: 178px;
-  padding: 20px 5px 20px 5px;
-
-}
-
 .footer {
   background-color: #263238;
   padding: 64px 0px 65px 0px;
 }
 
 .footer-company-name {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer-section-text {
   line-height: 20px;
   font-size: 14px;
-  color: #F5F7FA;
+  color: #f5f7fa;
 }
 
 .footer-heading {
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 28px;
   font-size: 20px;
 }
@@ -314,7 +214,7 @@ p {
 .footer-heading-subtext {
   line-height: 20px;
   font-size: 14px;
-  color: #F5F7FA;
+  color: #f5f7fa;
 }
 
 .email-section {
@@ -325,11 +225,11 @@ p {
   padding-left: 10px;
   border: none;
   border-radius: 6px;
-  color: #D9DBE1
+  color: #d9dbe1;
 }
 
 .email-section::placeholder {
-  color: #D9DBE1 !important;
+  color: #d9dbe1 !important;
 }
 
 .send {
@@ -342,7 +242,6 @@ p {
 .button {
   background-color: #4caf4f;
   border: 1px;
-
 }
 
 .button:hover {
@@ -378,4 +277,64 @@ p {
   background-color: #157347;
   border-color: #145c39;
   text-decoration: none;
+}
+
+/* Improve image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Enhance button hover effects */
+.button-design:hover {
+  background-color: #388e3c;
+  transition: background-color 0.3s ease;
+}
+
+/* Improve card shadows for depth */
+.cards,
+.card-custom {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.cards:hover,
+.card-custom:hover {
+  transform: translateY(-4px);
+}
+
+/* Ensure consistent spacing for image containers */
+.image-container img {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+/* Improve navbar link spacing */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4caf4f;
+}
+
+/* Accessibility for focus states */
+.nav-btn:focus,
+.button-design:focus {
+  outline: 2px solid #4caf4f;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve footer icon spacing */
+.footer img {
+  transition: opacity 0.3s ease;
+}
+
+.footer img:hover {
+  opacity: 0.8;
 }
