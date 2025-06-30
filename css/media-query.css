@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 576px) {
 
   .padding-style,
   .card-section,
@@ -74,6 +74,9 @@
     justify-content: center;
     gap: 10px;
   }
+  .col-8{
+    width: 100%;
+  }
 
   .footer {
     padding: 32px 16px;
@@ -117,14 +120,177 @@
     padding: 0Px;
     font-size: 20px;
   }
-  .row{
-    justify-content: center;
-  }
   .customer{
   display: contents;
   }
 }
 
-@media screen {
-  
-}
+ /* Tablet (576px–768px) */
+ @media screen and (min-width: 576px) and (max-width: 768px) {
+   .container {
+     max-width: 100% !important;
+     padding-left: 15px !important;
+     padding-right: 15px !important;
+     width: 100% !important;
+   }
+
+   .padding-style,
+   .card-section,
+   .unlock,
+   .Clients {
+     padding-left: 30px !important;
+     padding-right: 30px !important;
+   }
+
+   .navbar-nav {
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 10px;
+   }
+
+   .navbar .nav-btn {
+     font-size: 14px;
+     padding: 4px 10px;
+   }
+
+   .navbar-collapse {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .navbar .d-flex {
+     justify-content: center;
+     margin-top: 10px;
+     gap: 10px;
+   }
+
+   .slider-area {
+     padding-left: 15px;
+     padding-right: 15px;
+   }
+
+   .slider-text {
+     font-size: 42px;
+     line-height: 56px;
+   }
+
+   .cards {
+     width: 48%;
+     margin-bottom: 20px;
+   }
+
+   .cards img {
+     max-width: 120px;
+     height: auto;
+     margin: 0 auto;
+   }
+
+   .content-box {
+     width: 95%;
+     top: 0;
+     margin-top: 16px;
+   }
+
+   .card-title {
+     font-size: 15px;
+     word-break: break-word;
+   }
+
+   .footer {
+     padding: 40px 24px;
+     text-align: center;
+   }
+
+   .footer img {
+     max-width: 100%;
+     height: auto;
+     left: 422px;
+   }
+   .unlock{
+    padding-left: 200px;
+   }
+
+   .footer-company-name {
+     font-size: 20px;
+   }
+
+   .footer-section-text,
+   .footer-heading,
+   .footer-heading-subtext {
+     font-size: 14px;
+     line-height: 20px;
+   }
+
+   .email-section {
+     width: 100%;
+     max-width: 255px;
+   }
+
+   .send {
+     right: 10px;
+   }
+
+   .row.gap-4 {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .row>.col-4,
+   .row>.col-8 {
+     width: 100%;
+     text-align: center;
+   }
+
+   .row>.col-4 img {
+     width: 70%;
+     height: auto;
+     margin: 0 auto;
+   }
+
+   .customer img {
+     width: 80%;
+     height: auto;
+     margin-bottom: 20px;
+   }
+
+   .link {
+     font-size: 14px;
+     margin-top: 12px;
+   }
+ }
+
+ /* Laptop/Desktop (768px–1440px) */
+ /* @media screen and (min-width: 768px) and (max-width: 1440px) {
+   .container {
+     max-width: 960px;
+   }
+
+   .slider-text {
+     font-size: 56px;
+     line-height: 68px;
+   }
+
+   .section-text {
+     font-size: 52px;
+     line-height: 64px;
+   }
+
+   .footer {
+     padding: 64px 48px;
+   }
+
+   .card-title {
+     font-size: 16px;
+   }
+
+   .navbar-nav .nav-link {
+     margin: 0 12px;
+   }
+
+   .nav-btn {
+     padding: 8px 20px;
+     font-size: 16px;
+   }
+ }
+ */
