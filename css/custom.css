@@ -1,6 +1,9 @@
 * {
   font-family: "inter", sans-serif;
 }
+.bg-light{
+ background-color: #F5F7FA;
+}
 
 .mouse-cursor {
   cursor: pointer;
@@ -186,7 +189,7 @@ p {
   width: 442px;
 }
 
-.middle-sec {
+.unlock {
   padding-left: 144px;
   padding-right: 144px;
   align-items: center;
@@ -324,8 +327,8 @@ p {
   color: #D9DBE1
 }
 
-.email-sec::placeholder {
-  color: #D9DBE1;
+.email-section::placeholder {
+  color: #D9DBE1 !important;
 }
 
 .send {

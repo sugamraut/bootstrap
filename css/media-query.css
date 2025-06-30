@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
   .padding-style,
   .card-section,
-  .middle-sec,
+  .unlock,
   .Clients {
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -59,7 +59,7 @@
     backdrop-filter: blur(2px);
   }
 
-  .row.middle-sec {
+  .row.unlock {
     flex-direction: column;
     gap: 32px;
   }
