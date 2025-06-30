@@ -9,7 +9,8 @@
 .mouse-cursor {
   cursor: pointer;
 }
-text-width{
+
+text-width {
   padding-left: 12px !important;
 }
 
@@ -86,6 +87,7 @@ text-width{
 
 .slider-area {
   padding-top: 96px;
+  padding-bottom: 66px;
   background-color: #F5F7FA;
 
 }
@@ -160,6 +162,7 @@ p {
   line-height: 20px;
   font-size: 14px;
 }
+
 .heading {
   line-height: 44px;
   font-size: 32px;
@@ -191,8 +194,8 @@ p {
   align-items: center;
   justify-content: center;
 } */
-.unlock{
-      padding-top: 58px !important;
+.unlock {
+  padding-top: 58px !important;
 }
 
 .review-section {
