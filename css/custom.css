@@ -9,6 +9,9 @@
 .mouse-cursor {
   cursor: pointer;
 }
+text-width{
+  padding-left: 12px !important;
+}
 
 .padding-style {
   padding-left: 144px;
@@ -157,12 +160,6 @@ p {
   line-height: 20px;
   font-size: 14px;
 }
-
-.image-container {
-  padding-left: 144px;
-  padding-right: 144px;
-}
-
 .heading {
   line-height: 44px;
   font-size: 32px;
@@ -176,11 +173,8 @@ p {
 }
 
 .cards {
-  padding-right: 32px;
-  padding-left: 32px;
   padding-top: 24px;
   padding-bottom: 24px;
-  width: 299px;
   border: none;
   background-color: #FFFFFF;
 
@@ -190,11 +184,15 @@ p {
   width: 442px;
 }
 
-.unlock,.community {
+
+/* .unlock,.community {
   padding-left: 144px;
   padding-right: 144px;
   align-items: center;
   justify-content: center;
+} */
+.unlock{
+      padding-top: 58px !important;
 }
 
 .review-section {
@@ -291,7 +289,7 @@ p {
 
 .footer {
   background-color: #263238;
-  padding: 64px 144px 65px 144px;
+  padding: 64px 0px 65px 0px;
 }
 
 .footer-company-name {

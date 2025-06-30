@@ -8,6 +8,7 @@
   }
   html, body {
   overflow-x: hidden;
+  margin: auto;
 }
 
 
@@ -46,9 +47,9 @@
   .password-img-style img {
     width: 100%;
     height: auto;
-    opacity: 1;
+    opacity: 0.9;
     position: absolute;
-    z-index: 0;
+    z-index: -2;
   }
 
   .text-width {
@@ -57,7 +58,6 @@
     background-color: rgba(255, 255, 255, 0.8);
     padding: 16px;
     backdrop-filter: blur(2px);
-    opacity: 0.8;
   }
 
   .row.unlock {
