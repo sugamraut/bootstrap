@@ -65,6 +65,8 @@
   .row.unlock {
     flex-direction: column;
     gap: 32px;
+    align-items: center;
+    justify-content: center;
   }
 
   .image-container>div {
@@ -111,4 +113,18 @@
     left: auto;
     right: 10px;
   }
+  .navbar-toggler{
+    padding: 0Px;
+    font-size: 20px;
+  }
+  .row{
+    justify-content: center;
+  }
+  .customer{
+  display: contents;
+  }
+}
+
+@media screen {
+  
 }
