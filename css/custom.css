@@ -1,8 +1,9 @@
 * {
   font-family: "inter", sans-serif;
 }
-.bg-light{
- background-color: #F5F7FA;
+
+.bg-light {
+  background-color: #F5F7FA !important;
 }
 
 .mouse-cursor {
@@ -194,7 +195,6 @@ p {
   padding-right: 144px;
   align-items: center;
   justify-content: center;
-  gap: 50px;
 }
 
 .review-section {
