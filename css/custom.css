@@ -13,6 +13,9 @@
 .text-width {
   padding-left: 12px !important;
 }
+.navbar-logo{
+  width: 154px;
+}
 
 .card-image {
   height: 286px;
@@ -281,7 +284,6 @@ p {
 
 /* Improve image responsiveness */
 img {
-  max-width: 100%;
   height: auto;
 }
 
@@ -292,12 +294,15 @@ img {
 }
 
 /* Improve card shadows for depth */
-.cards,
-.card-custom {
+.cards
+ {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  border: none;
 }
-
+.card-custom{
+  border: none;
+}
 .cards:hover,
 .card-custom:hover {
   transform: translateY(-4px);

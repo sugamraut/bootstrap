@@ -306,7 +306,7 @@
   }
 
   .slider-image {
-    max-width: 350px;
+    max-width: 290px;
     height: auto;
     margin: 0 auto;
   }
@@ -358,16 +358,16 @@
 
   .email-section {
     width: 100%;
-    max-width: 300px; /* Increased max-width for better fit */
-    padding-right: 40px; /* Added padding to accommodate the send button */
-    box-sizing: border-box; /* Ensure padding doesn't exceed width */
+    max-width: 300px;
+    padding-right: 40px;
+    box-sizing: border-box;
   }
 
   .send {
-    right: 10px; /* Adjusted right offset */
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Fixed width for the send icon */
+    width: 20px;
     height: auto;
   }
 
@@ -385,6 +385,7 @@
     max-width: 80%;
     height: auto;
     margin: 0 auto;
+    margin-top: 30px;
   }
 
   .customer img {
