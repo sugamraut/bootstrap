@@ -1,0 +1,60 @@
+.navbar-logo {
+  width: 154px;
+}
+.navbar-list {
+  font-size: 16px;
+  line-height: 24px;
+  color: #18191f;
+}
+.link {
+  bottom: 13px;
+  right: 0px;
+  color: #4caf4f;
+}
+.nav-btn.signup {
+  background-color: #4caf4f !important;
+}
+.nav-btn {
+  padding: 6px 16px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-btn.login {
+  color: #198754;
+  background-color: transparent;
+}
+
+.nav-btn.login:hover {
+  background-color: #d1e7dd;
+  border-color: #198754;
+  text-decoration: none;
+}
+
+.nav-btn.signup {
+  color: white;
+  background-color: #198754;
+}
+
+.nav-btn.signup:hover {
+  background-color: #157347;
+  border-color: #145c39;
+  text-decoration: none;
+}
+/* Improve navbar link spacing */
+.navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #4caf4f;
+}
+
+/* Accessibility for focus states */
+.nav-btn:focus,
+.button-design:focus {
+  outline: 2px solid #4caf4f;
+  outline-offset: 2px;
+}
