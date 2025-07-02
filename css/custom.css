@@ -230,6 +230,11 @@ p {
   border-radius: 6px;
   color: #d9dbe1;
 }
+.form-control{
+      background-color: unset;
+    border: none;
+  
+}
 
 .email-section::placeholder {
   color: #d9dbe1 !important;
@@ -237,9 +242,12 @@ p {
 
 .send {
   bottom: 0px;
-  left: 220px;
-  cursor: pointer;
+  left:210px;
+  top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
+  width: 24px;
+  height: auto;
 }
 
 .button {
@@ -282,11 +290,6 @@ p {
   text-decoration: none;
 }
 
-/* Improve image responsiveness */
-img {
-  height: auto;
-}
-
 /* Enhance button hover effects */
 .button-design:hover {
   background-color: #388e3c;
@@ -309,12 +312,6 @@ img {
   transform: translateY(-4px);
 }
 
-/* Ensure consistent spacing for image containers */
-.image-container img {
-  max-height: 40px;
-  object-fit: contain;
-}
-
 /* Improve navbar link spacing */
 .navbar-nav .nav-link {
   transition: color 0.3s ease;
@@ -331,16 +328,13 @@ img {
   outline-offset: 2px;
 }
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}
 
 /* Improve footer icon spacing */
 .footer img {
+  height: auto;
+  margin-right: 12px;
   transition: opacity 0.3s ease;
 }
-
 .footer img:hover {
   opacity: 0.8;
 }
