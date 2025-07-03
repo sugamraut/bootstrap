@@ -4,6 +4,7 @@ import Client from "./Client";
 import Features from "./Features";
 import CaseStudy from "./CaseStudy";
 import ImpactStauts from "./ImpactStatus";
+import Blog from "./blog";
 
 function LandingPage() {
   return (
@@ -27,6 +28,10 @@ function LandingPage() {
       </div>
       <div className="bg-light">
         <ImpactStauts />
+      </div>
+      <div className="container text-center">
+        <Blog/>
+
       </div>
     </>
   );
