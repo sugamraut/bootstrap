@@ -35,7 +35,7 @@
 
 .nav-btn.signup {
   color: white;
-  background-color: #198754;
+  background-color: #4caf4f;
 }
 
 .nav-btn.signup:hover {
@@ -124,4 +124,43 @@
   color: #4d4d4d;
   font-size: 36px;
   line-height: 44px;
+}
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.content-box {
+  position: relative;
+  top: -40px;
+  /* overlap */
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.read-more {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: 500;
+}
+.card-custom {
+  border: none;
+}
+.cards:hover,
+.card-custom:hover {
+  transform: translateY(-4px);
 }
