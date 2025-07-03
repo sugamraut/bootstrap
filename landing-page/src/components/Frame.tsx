@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Frame = () => {
   const [farmeData, SetFarmeData] = useState(null);
@@ -30,6 +32,7 @@ const Frame = () => {
         </div>
         <button className="btn btn-success button-design mb-4">
           {farmeData.ctaText}
+          <FontAwesomeIcon icon={faArrowRightLong}/>
         </button>
       </div>
     </section>

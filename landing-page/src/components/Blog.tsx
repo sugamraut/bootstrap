@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState(null);
@@ -45,8 +47,10 @@ const Blog = () => {
                 </div>
                 <div className="content-box">
                   <div className="card-title">{article.title}</div>
+
                   <a href={article.ctaUrl} className="read-more">
-                    {article.ctaText} →
+                    {article.ctaText}
+                    <FontAwesomeIcon icon={faArrowRightLong} />
                   </a>
                 </div>
               </div>
