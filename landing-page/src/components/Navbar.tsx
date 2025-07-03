@@ -4,18 +4,24 @@ import logo from "../assets/image/navbarlogo.png";
 const Nabar = () => {
   const [headerData, setHeaderData] = useState(null);
   const fetchNavbar= async()=>{
-    const response=await axios.get("https://landing-2vb.pages.dev/api/header.json")
+    try {
+         const response=await axios.get("https://landing-2vb.pages.dev/api/header.json")
     if(response.data.status==="success"){
       setHeaderData(response.data.data)
     }
+      
+    } catch (error) {
+      console.error("Error fetching feature data:", error);
+    }
+ 
   }
-  useEffect(()=>{
-    fetchNavbar()
-  })
+   useEffect(() => {
+    fetchNavbar();
+  }, []);
   if (!headerData) return null;
 
   return (
-    <div className="bg-light py-2">
+    
       <nav className="navbar navbar-expand-md navbar-light container container-xxl">
         <a className="navbar-brand d-flex align-items-center" href="#">
           <img
@@ -62,7 +68,6 @@ const Nabar = () => {
           </div>
         </div>
       </nav>
-    </div>
   );
 };
 

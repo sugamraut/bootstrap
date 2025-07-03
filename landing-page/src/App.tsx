@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from './layouts/rootlayouts';
-import Navbar from './components/Nabar'
+import Navbar from './components/Navbar'
 import Slider from './components/Slider'
+import LandingPage from './components/LandingPage';
 
 
 const router = createBrowserRouter([
@@ -9,8 +10,8 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout />,
     children: [
-      { index: true, element: <Navbar /> },
-      { path: 'about', element: <Slider /> },
+      { index: true, element: <LandingPage /> },
+      // { path: 'about', element: <Slider /> },
       // { path: '*', element: <NotFound /> }
     ]
   }
