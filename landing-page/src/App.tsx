@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from './layouts/rootlayouts';
 import Navbar from './components/Nabar'
+import Slider from './components/Slider'
 
 
 const router = createBrowserRouter([
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Navbar /> },
-      // { path: 'about', element: <About /> },
+      { path: 'about', element: <Slider /> },
       // { path: '*', element: <NotFound /> }
     ]
   }

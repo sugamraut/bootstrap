@@ -1,28 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import logo from "../assets/image/navbarlogo.png";
-
 const Nabar = () => {
   const [headerData, setHeaderData] = useState(null);
-  useEffect(() => {
-    axios
-      .get("https://landing-2vb.pages.dev/api/header.json")
-      .then((res) => {
-        if (res.data.status === "success") {
-          setHeaderData(res.data.data);
-        }
-      })
-      .catch((err) => {
-        console.error("Failed to fetch header data:", err);
-        setHeaderData({
-
-          logoUrl: "",
-          navigation: [],
-          authActions: [],
-        });
-      });
-  }, []);
-
+  const fetchNavbar= async()=>{
+    const response=await axios.get("https://landing-2vb.pages.dev/api/header.json")
+    if(response.data.status==="success"){
+      setHeaderData(response.data.data)
+    }
+  }
+  useEffect(()=>{
+    fetchNavbar()
+  })
   if (!headerData) return null;
 
   return (
