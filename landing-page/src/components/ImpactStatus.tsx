@@ -2,7 +2,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const ImpactStauts = () => {
-  const [impactData, setImpactStatus] = useState(null);
+  type Impacttype = {
+    title: string;
+    description: string;
+    stats: {
+      value: any;
+      item: string;
+      index: number;
+      logoUrl: string;
+      label: string;
+    }[];
+  };
+  const [impactData, setImpactStatus] = useState<Impacttype | null>(null);
 
   const fetchdata = async () => {
     try {

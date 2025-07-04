@@ -2,7 +2,16 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 function Features() {
-  const [featureData, setFeatureData] = useState(null)
+   type FeatureType = {
+    title: string;
+    subtitle: string;
+    features: {
+      iconUrl: string;
+      title: string;
+      description: string;
+    }[];
+  };
+  const [featureData, setFeatureData] = useState<FeatureType|null>(null)
 
   const fetchdata = async () => {
     try {

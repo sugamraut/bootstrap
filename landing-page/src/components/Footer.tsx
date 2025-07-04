@@ -4,7 +4,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
-  const [footerData, setFooterData] = useState(null)
+    type FooterType = {
+    socialLinks: {
+      platform: string; 
+      url: string;
+    }[];
+    footerNavigation: {
+      company: {
+        label: string;
+        href: string;
+      }[];
+      support: {
+        label: string;
+        href: string;
+      }[];
+    };
+  };
+  const [footerData, setFooterData] = useState <FooterType|null>(null)
 
   const fetchFooterData = async () => {
     try {
@@ -44,7 +60,7 @@ const Footer = () => {
               {socialLinks.map((link, index) => (
                 <a href={link.url} target="_blank" rel="noopener noreferrer" key={index}>
                   <img
-                    src={`./image/${link.platform.toLowerCase()}.png`}
+                    src={link.platform}
                     alt={link.platform}
                     className="pe-3 mouse-cursor img-fluid"
                   />

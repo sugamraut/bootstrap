@@ -4,7 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Frame = () => {
-  const [farmeData, SetFarmeData] = useState(null);
+  type FarmeData={
+    title:string;
+    ctaText:string
+
+  }
+  const [farmeData, SetFarmeData] = useState<FarmeData|null>(null);
   const featchFameData = async () => {
     try {
       const response = await axios.get(

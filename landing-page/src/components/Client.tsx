@@ -2,7 +2,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Client = () => {
-  const [sectionData, setSectionData] = useState(null);
+  type ClientData={
+    title:string;
+    description:string;
+    clientLogos:{
+      clientLogos: string | undefined;
+      logo:string;
+      index:number;
+    }[];
+
+  }
+  const [sectionData, setSectionData] = useState <ClientData|null >(null);
 
   const fetchClient = async () => {
     try {
@@ -33,7 +43,7 @@ const Client = () => {
           {sectionData.clientLogos.map((logo, index) => (
             <img
               key={index}
-              src={logo}
+              src={logo.clientLogos}
               alt={`client-logo-${index}`}
               className="m-2"
             />

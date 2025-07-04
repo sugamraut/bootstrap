@@ -4,7 +4,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Blog = () => {
-  const [blogs, setBlogs] = useState(null);
+  type Blog = {
+    title:string;
+    description:string;
+    articles:{
+      ctaText: string;
+      title: string;
+      ctaUrl: string | undefined;
+      imageUrl: string | undefined;
+      article:string;
+      index:number;
+    }[];
+
+
+
+  };
+  const [blogs, setBlogs] = useState<Blog | null>(null);
 
   const fetchBlogData = async () => {
     try {

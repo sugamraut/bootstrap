@@ -3,13 +3,30 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
+type constentType = {
+  imageUrl: string;
+  title: string;
+  description: string;
+  ctaUrl: string;
+  ctaText: string;
+  authorImageUrl: string;
+  authorName: string;
+  quote: string;
+  authorPosition: string;
+  clientIcons?:{
+    clientIcons: string | undefined;
+    icon:any;
+    index:string;
+  }[];
+
+};
 interface IcardProps {
   apiUrl: string;
   type: string;
 }
 
 const ContentCard = ({ apiUrl, type }: IcardProps) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<constentType | null>(null);
 
   const fetchData = async () => {
     try {
@@ -65,14 +82,15 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
               {data.clientIcons?.map((icon, index) => (
                 <img
                   key={index}
-                  src={icon}
+                  src={icon.clientIcons}
                   alt={`client-logo-${index}`}
                   className="me-3 mb-2"
                   style={{ width: 50 }}
                 />
               ))}
               <a href={data.ctaUrl} className="mouse-cursor link-design">
-                <h6>{data.ctaText}
+                <h6>
+                  {data.ctaText}
                   <FontAwesomeIcon icon={faArrowRightLong} />
                 </h6>
               </a>

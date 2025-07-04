@@ -2,7 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Slider = () => {
-  const [headerData, setHeaderData] = useState([]);
+  type SliderItem = {
+  title: string;
+  subtitle: string;
+  imageUrl: string;
+  ctaText: string;
+  ctaUrl: string;
+};
+  const [headerData, setHeaderData] =  useState<SliderItem[]>([]);
 
   const fetchSliderData = async () => {
     try {
