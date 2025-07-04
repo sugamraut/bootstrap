@@ -69,7 +69,6 @@
 .slider-area {
   padding-top: 96px;
   padding-bottom: 66px;
-  background-color: #f5f7fa;
 }
 .slider-text {
   line-height: 74px;
@@ -163,4 +162,60 @@
 .cards:hover,
 .card-custom:hover {
   transform: translateY(-4px);
+}
+
+a{
+  text-decoration: unset;
+}
+.link-design{
+  color: #4caf4f !important;
+  margin-bottom: 0px; 
+   font-weight: 500; 
+  line-height: 0;
+
+}
+.footer-text {
+  font-size: 64px;
+  line-height: 76px;
+  color: #263238;
+}
+.footer {
+  background-color: #263238;
+  padding: 64px 0px 65px 0px;
+}
+.footer-company-name {
+  color: #ffffff;
+}
+.footer-section-text {
+  line-height: 20px;
+  font-size: 14px;
+  color: #f5f7fa;
+}
+.footer-heading {
+  color: #ffffff;
+  line-height: 28px;
+  font-size: 20px;
+}
+.footer-heading-subtext {
+  line-height: 20px;
+  font-size: 14px;
+  color: #f5f7fa;
+}
+.email-section {
+  background-color: #ffffff45;
+  width: 255px;
+  height: 40px;
+  padding-right: 34px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 6px;
+  color: #d9dbe1;
+}
+.email-section::placeholder {
+  color: #d9dbe1 !important;
+}
+.sendButton{
+  color:#ffffff;
+  top:14px;
+  right: 28px;
 }

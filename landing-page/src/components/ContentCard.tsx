@@ -1,5 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+
 interface IcardProps {
   apiUrl: string;
   type: string;
@@ -32,9 +35,9 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
             <img src={data.imageUrl} alt={data.title} className="img-fluid" />
           </div>
           <div className="col-lg-8 col-md-8 text-start pt-5 unlock">
-            <h6 className="heading fw-bold">{data.title}</h6>
+            <h6 className="heading fw-bold ">{data.title}</h6>
             <p className="contents">{data.description}</p>
-            <a href={data.ctaUrl} className="button-design mouse-cursor">
+            <a href={data.ctaUrl} className="  mouse-cursor">
               <span className="button-text">{data.ctaText}</span>
             </a>
           </div>
@@ -68,8 +71,10 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
                   style={{ width: 50 }}
                 />
               ))}
-              <a href={data.ctaUrl} className="mouse-cursor">
-                <h6>{data.ctaText}</h6>
+              <a href={data.ctaUrl} className="mouse-cursor link-design">
+                <h6>{data.ctaText}
+                  <FontAwesomeIcon icon={faArrowRightLong} />
+                </h6>
               </a>
             </div>
           </div>

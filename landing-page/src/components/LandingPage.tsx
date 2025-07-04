@@ -6,6 +6,7 @@ import ContentCard from "./ContentCard";
 import ImpactStauts from "./ImpactStatus";
 import Blog from "./Blog";
 import Frame from "./Frame";
+import Footer from "./Footer";
 
 function LandingPage() {
   return (
@@ -25,27 +26,36 @@ function LandingPage() {
         <Features />
       </div>
       <div className="container">
-        <ContentCard apiUrl={"https://landing-2vb.pages.dev/api/case-study.json"} type={"caseStudy"} />
+        <ContentCard
+          apiUrl={"https://landing-2vb.pages.dev/api/case-study.json"}
+          type={"caseStudy"}
+        />
       </div>
       <div className="bg-light">
         <ImpactStauts />
       </div>
       <div className="container">
-        <ContentCard apiUrl={"https://landing-2vb.pages.dev/api/articlehighlight.json"} type={"article"}/>
+        <ContentCard
+          apiUrl={"https://landing-2vb.pages.dev/api/articlehighlight.json"}
+          type={"article"}
+        />
+      </div>
+      <div className="bg-light">
+        <div className="container">
+          <ContentCard
+            apiUrl={"https://landing-2vb.pages.dev/api/customer.json"}
+            type={"customer"}
+          />
+        </div>
       </div>
       <div className="container text-center">
         <Blog />
       </div>
-      <div className="bg-light">
-        <div className="container">
-          <ContentCard apiUrl={"https://landing-2vb.pages.dev/api/customer.json"} type={"customer"}/>
 
-        </div>
-
-      </div>
       <div className="bg-light">
         <Frame />
       </div>
+      <Footer/>
     </>
   );
 }
