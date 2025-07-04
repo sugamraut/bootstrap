@@ -49,7 +49,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
       {type !== "customer" && (
         <>
           <div className="col-4">
-            <img src={data.imageUrl} alt={data.title} className="img-fluid" />
+            <img src={`https://landing-2vb.pages.dev${data.imageUrl}`} alt={data.title} className="img-fluid" />
           </div>
           <div className="col-lg-8 col-md-8 text-start pt-5 unlock">
             <h6 className="heading fw-bold ">{data.title}</h6>
@@ -65,9 +65,9 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
         <>
           <div className="col-lg-2 col-md-2">
             <img
-              src={data.authorImageUrl}
+              src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
               alt={data.authorName}
-              className="img-fluid rounded-circle"
+              className="img-fluid"
             />
           </div>
           <div className="col-lg-10 col-md-10 text-start pt-3">
@@ -82,7 +82,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
               {data.clientIcons?.map((icon, index) => (
                 <img
                   key={index}
-                  src={icon.clientIcons}
+                  src={`https://landing-2vb.pages.dev${icon.clientIcons}`}
                   alt={`client-logo-${index}`}
                   className="me-3 mb-2"
                   style={{ width: 50 }}

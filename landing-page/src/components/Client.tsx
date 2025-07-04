@@ -7,8 +7,8 @@ const Client = () => {
     description:string;
     clientLogos:{
       clientLogos: string | undefined;
-      logo:string;
-      index:number;
+      logo:string|undefined;
+      index:number|undefined;
     }[];
 
   }
@@ -40,14 +40,15 @@ const Client = () => {
       </div>
       <div className="image-container row mt-3">
         <div className="d-flex justify-content-between">
-          {sectionData.clientLogos.map((logo, index) => (
-            <img
+          {sectionData.clientLogos.map((logo, index) => {
+            console.log({logo})
+            return  <img
               key={index}
-              src={logo.clientLogos}
+               src={`https://landing-2vb.pages.dev${logo}`}
               alt={`client-logo-${index}`}
               className="m-2"
             />
-          ))}
+          })}
         </div>
       </div>
     </>

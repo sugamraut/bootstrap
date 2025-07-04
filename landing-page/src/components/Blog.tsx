@@ -55,7 +55,8 @@ const Blog = () => {
               <div className="card card-custom">
                 <div className="image-wrapper">
                   <img
-                    src={article.imageUrl}
+                  src={`https://landing-2vb.pages.dev${article.imageUrl}`}
+                    // src={article.imageUrl}
                     alt={article.ctaUrl}
                     className="img-fluid"
                   />

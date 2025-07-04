@@ -60,7 +60,7 @@ const Footer = () => {
               {socialLinks.map((link, index) => (
                 <a href={link.url} target="_blank" rel="noopener noreferrer" key={index}>
                   <img
-                    src={link.platform}
+                  src={`https://landing-2vb.pages.dev${link.platform}`}
                     alt={link.platform}
                     className="pe-3 mouse-cursor img-fluid"
                   />

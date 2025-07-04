@@ -1,8 +1,8 @@
-import axios from 'axios'
-import  { useEffect, useState } from 'react'
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Features() {
-   type FeatureType = {
+  type FeatureType = {
     title: string;
     subtitle: string;
     features: {
@@ -11,33 +11,33 @@ function Features() {
       description: string;
     }[];
   };
-  const [featureData, setFeatureData] = useState<FeatureType|null>(null)
+  const [featureData, setFeatureData] = useState<FeatureType | null>(null);
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get("https://landing-2vb.pages.dev/api/features.json")
+      const response = await axios.get(
+        "https://landing-2vb.pages.dev/api/features.json"
+      );
       if (response.data.status === "success") {
-        setFeatureData(response.data.data)
+        setFeatureData(response.data.data);
       }
     } catch (error) {
-      console.error("Error fetching feature data:", error)
+      console.error("Error fetching feature data:", error);
     }
-  }
+  };
 
   useEffect(() => {
-    fetchdata()
-  }, [])
+    fetchdata();
+  }, []);
 
   if (!featureData) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
 
   return (
     <>
       <div className="mt-5">
-        <h6 className="heading fw-semibold">
-          {featureData.title}
-        </h6>
+        <h6 className="heading fw-semibold">{featureData.title}</h6>
       </div>
       <p className="heading-text">{featureData.subtitle}</p>
 
@@ -47,7 +47,7 @@ function Features() {
             <div className="cards text-center">
               <div>
                 <img
-                  src={feature.iconUrl}
+                  src={`https://landing-2vb.pages.dev${feature.iconUrl}`}
                   alt={feature.title}
                   className="img-fluid"
                 />
@@ -59,7 +59,7 @@ function Features() {
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default Features
+export default Features;

@@ -76,7 +76,8 @@ const Slider = () => {
               </div>
               <div className="col-6 text-end">
                 <img
-                  src={item.imageUrl}
+                  src={`https://landing-2vb.pages.dev${item.imageUrl}`}
+                  // src={item.imageUrl}
                   className="img-fluid"
                   alt={`Slide image ${index + 1}`}
                 />

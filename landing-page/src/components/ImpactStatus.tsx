@@ -50,7 +50,7 @@ const ImpactStauts = () => {
               <div key={index} className="col-6 col-sm-6 col-md-6 mb-4">
                 <div className="d-flex gap-2">
                   <img
-                    src={item.logoUrl}
+                  src={`https://landing-2vb.pages.dev${item.logoUrl}`}
                     className="mb-1 img-fluid"
                     alt={item.label}
                   />
