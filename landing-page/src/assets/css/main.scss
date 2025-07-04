@@ -164,15 +164,14 @@
   transform: translateY(-4px);
 }
 
-a{
+a {
   text-decoration: unset;
 }
-.link-design{
+.link-design {
   color: #4caf4f !important;
-  margin-bottom: 0px; 
-   font-weight: 500; 
+  margin-bottom: 0px;
+  font-weight: 500;
   line-height: 0;
-
 }
 .footer-text {
   font-size: 64px;
@@ -214,8 +213,35 @@ a{
 .email-section::placeholder {
   color: #d9dbe1 !important;
 }
-.sendButton{
-  color:#ffffff;
-  top:14px;
+.sendButton {
+  color: #ffffff;
+  top: 14px;
   right: 28px;
+}
+
+//
+
+.input-field-desigin {
+  background-color: #f1f1f1;
+   // background: linear-gradient(to right,#CF203E ,#ad8d8d , #505DA0);
+}
+
+.contact-form-button {
+  background-color: #000000;
+  border-radius: 6px;
+  padding: 15px 32px 15px 32px;
+  color: #ffffff;
+}
+.number-section {
+  width: 16px;
+  height: 12px;
+}
+.form-shadow {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+.contact-email-section::placeholder{
+  right: 20px;
+  position: absolute;
 }

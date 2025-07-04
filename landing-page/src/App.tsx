@@ -3,6 +3,7 @@ import RootLayout from './layouts/rootlayouts';
 import Navbar from './components/Navbar'
 import Slider from './components/Slider'
 import LandingPage from './components/LandingPage';
+import Contact from './pages/contact';
 
 
 const router = createBrowserRouter([
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <LandingPage /> },
-      // { path: 'about', element: <Slider /> },
+      { path: 'contact', element: <Contact/> },
       // { path: '*', element: <NotFound /> }
     ]
   }
