@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from './layouts/rootlayouts';
 import Navbar from './components/Navbar'
 import Slider from './components/Slider'
-import LandingPage from './components/LandingPage';
+import LandingPage from './pages/LandingPage';
 import Contact from './pages/contact';
 
 

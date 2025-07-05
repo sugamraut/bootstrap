@@ -1,18 +1,17 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import {baseUrl} from "../config"
 const Client = () => {
-  type ClientData={
-    title:string;
-    description:string;
-    clientLogos:{
+  type ClientData = {
+    title: string;
+    description: string;
+    clientLogos: {
       clientLogos: string | undefined;
-      logo:string|undefined;
-      index:number|undefined;
+      logo: string | undefined;
+      index: number | undefined;
     }[];
-
-  }
-  const [sectionData, setSectionData] = useState <ClientData|null >(null);
+  };
+  const [sectionData, setSectionData] = useState<ClientData | null>(null);
 
   const fetchClient = async () => {
     try {
@@ -34,21 +33,25 @@ const Client = () => {
 
   return (
     <>
-      <div className="text-center">
-        <h6 className="heading">{sectionData.title}</h6>
-        <p className="heading-text">{sectionData.description}</p>
-      </div>
-      <div className="image-container row mt-3">
-        <div className="d-flex justify-content-between">
-          {sectionData.clientLogos.map((logo, index) => {
-            console.log({logo})
-            return  <img
-              key={index}
-               src={`https://landing-2vb.pages.dev${logo}`}
-              alt={`client-logo-${index}`}
-              className="m-2"
-            />
-          })}
+      <div className="container mt-5">
+        <div className="text-center">
+          <h6 className="heading">{sectionData.title}</h6>
+          <p className="heading-text">{sectionData.description}</p>
+        </div>
+        <div className="image-container row mt-3">
+          <div className="d-flex justify-content-between">
+            {sectionData.clientLogos.map((logo, index) => {
+              console.log({ logo });
+              return (
+                <img
+                  key={index}
+                  src={`https://landing-2vb.pages.dev${logo}`}
+                  alt={`client-logo-${index}`}
+                  className="m-2"
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
     </>

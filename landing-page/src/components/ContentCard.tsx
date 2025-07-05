@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 type constentType = {
   imageUrl: string;
@@ -88,12 +89,12 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
                   style={{ width: 50 }}
                 />
               ))}
-              <a href={data.ctaUrl} className="mouse-cursor link-design">
+              <Link to={data.ctaUrl} className="mouse-cursor link-design">
                 <h6>
                   {data.ctaText}
                   <FontAwesomeIcon icon={faArrowRightLong} />
                 </h6>
-              </a>
+              </Link>
             </div>
           </div>
         </>

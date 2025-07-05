@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-
+import { Link } from "react-router-dom";
+import {baseUrl} from "../config"
 const Blog = () => {
   type Blog = {
     title:string;
@@ -53,21 +54,21 @@ const Blog = () => {
           {blogs.articles.map((article, index) => (
             <div className="col-4" key={index}>
               <div className="card card-custom">
-                <div className="image-wrapper">
+                <div className="image-wrapper blog-image-wrapper">
                   <img
                   src={`https://landing-2vb.pages.dev${article.imageUrl}`}
                     // src={article.imageUrl}
                     alt={article.ctaUrl}
-                    className="img-fluid"
+                    className="img-fluid blog-image"
                   />
                 </div>
                 <div className="content-box">
                   <div className="card-title">{article.title}</div>
 
-                  <a href={article.ctaUrl} className="read-more">
+                  <Link to="article.ctaUrl" className="read-more">
                     {article.ctaText}
                     <FontAwesomeIcon icon={faArrowRightLong} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

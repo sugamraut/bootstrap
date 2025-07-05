@@ -1,27 +1,22 @@
-import Nabar from "./Navbar";
-import Slider from "./Slider";
-import Client from "./Client";
-import Features from "./Features";
-import ContentCard from "./ContentCard";
-import ImpactStauts from "./ImpactStatus";
-import Blog from "./Blog";
-import Frame from "./Frame";
-import Footer from "./Footer";
+import Nabar from "../components/Navbar";
+import Slider from "../components/Slider";
+import Client from "../components/Client";
+import Features from "../components/Features";
+import ContentCard from "../components/ContentCard";
+import ImpactStauts from "../components/ImpactStatus";
+import Blog from "../components/Blog";
+import Frame from "../components/Frame";
+import Footer from "../components/Footer";
 
 function LandingPage() {
   return (
     <>
-      <div className="bg-light py-2">
-        <Nabar />
-      </div>
-      <div className="bg-light">
-        <div className="container">
-          <Slider />
-        </div>
-      </div>
-      <div className="container mt-5">
-        <Client />
-      </div>
+      <Nabar />
+
+      <Slider />
+
+      <Client />
+
       <div className="container text-center">
         <Features />
       </div>
@@ -55,7 +50,7 @@ function LandingPage() {
       <div className="bg-light">
         <Frame />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
