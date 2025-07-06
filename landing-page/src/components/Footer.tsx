@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom"; 
 
 const Footer = () => {
   type FooterType = {

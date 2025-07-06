@@ -7,6 +7,9 @@ import ImpactStauts from "../components/ImpactStatus";
 import Blog from "../components/Blog";
 import Frame from "../components/Frame";
 import Footer from "../components/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "../assets/css/main.scss";
 
 function LandingPage() {
   return (

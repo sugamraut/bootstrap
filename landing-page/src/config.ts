@@ -1,1 +1,1 @@
-export const baseUrl= import.meta.env.api
+export const baseUrl= process.env.api

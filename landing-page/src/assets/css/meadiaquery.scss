@@ -102,3 +102,12 @@
     justify-content: center;
   }
 }
+@media (max-width: 768px) {
+  .slider-image-wrapper {
+    height: 200px;
+  }
+  .slider-text {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
