@@ -55,9 +55,9 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
           <div className="col-lg-8 col-md-8 text-start pt-5 unlock">
             <h6 className="heading fw-bold ">{data.title}</h6>
             <p className="contents">{data.description}</p>
-            <a href={data.ctaUrl} className="  mouse-cursor">
+            <Link to={data.ctaUrl} className="  mouse-cursor">
               <span className="button-text">{data.ctaText}</span>
-            </a>
+            </Link>
           </div>
         </>
       )}
@@ -89,12 +89,12 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
                   style={{ width: 50 }}
                 />
               ))}
-              <Link to={data.ctaUrl} className="mouse-cursor link-design">
+              <a href={data.ctaUrl} className="mouse-cursor link-design">
                 <h6>
                   {data.ctaText}
                   <FontAwesomeIcon icon={faArrowRightLong} />
                 </h6>
-              </Link>
+              </a>
             </div>
           </div>
         </>

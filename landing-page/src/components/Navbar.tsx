@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom"; // ✅ Import Link
 import logo from "../assets/image/navbarlogo.png";
+import { Link } from "react-router-dom";
 
 const Nabar = () => {
   type NavItem = {
@@ -38,8 +38,7 @@ const Nabar = () => {
   if (!headerData) return null;
 
   return (
-    <div className="bg-light">
-      <nav className="navbar navbar-expand-md navbar-light container container-xxl">
+    <nav className="navbar navbar-expand-md navbar-light container container-xxl">
       <Link className="navbar-brand d-flex align-items-center" to="/">
         <img
           src={headerData.logoUrl || logo}
@@ -64,9 +63,9 @@ const Nabar = () => {
         <ul className="navbar-nav mx-auto text-center text-md-start">
           {headerData.navigation.map((item, index) => (
             <li className="nav-item" key={index}>
-              <Link className="nav-link mx-2" to={item.href}>
+              <a className="nav-link mx-2" href={item.href}>
                 {item.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -85,8 +84,6 @@ const Nabar = () => {
         </div>
       </div>
     </nav>
-    </div>
-    
   );
 };
 

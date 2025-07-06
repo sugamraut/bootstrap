@@ -1,13 +1,13 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from "axios"
+import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom"; // ✅ Import Link
 
 const Footer = () => {
-  type FooterType = {
+    type FooterType = {
     socialLinks: {
-      platform: string;
+      platform: string; 
       url: string;
     }[];
     footerNavigation: {
@@ -21,31 +21,28 @@ const Footer = () => {
       }[];
     };
   };
-
-  const [footerData, setFooterData] = useState<FooterType | null>(null);
+  const [footerData, setFooterData] = useState <FooterType|null>(null)
 
   const fetchFooterData = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/footer.json"
-      );
+      const response = await axios.get("https://landing-2vb.pages.dev/api/footer.json")
       if (response.data.status === "success") {
-        setFooterData(response.data.data);
+        setFooterData(response.data.data)
       }
     } catch (error) {
-      console.log("Something went wrong", error);
+      console.log("Something went wrong", error)
     }
-  };
-
-  useEffect(() => {
-    fetchFooterData();
-  }, []);
-
-  if (!footerData) {
-    return <div>Loading...</div>;
   }
 
-  const { socialLinks, footerNavigation } = footerData;
+  useEffect(() => {
+    fetchFooterData()
+  }, [])
+
+  if (!footerData) {
+    return <div>Loading...</div>
+  }
+
+  const { socialLinks, footerNavigation } = footerData
 
   return (
     <footer className="footer">
@@ -62,14 +59,9 @@ const Footer = () => {
             <p className="footer-section-text fs-normal">All rights reserved</p>
             <div className="mt-4">
               {socialLinks.map((link, index) => (
-                <Link
-                  to={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={index}
-                >
+                <Link to={link.url} target="_blank" rel="noopener noreferrer" key={index}>
                   <img
-                    src={`https://landing-2vb.pages.dev${link.platform}`}
+                  src={`https://landing-2vb.pages.dev${link.platform}`}
                     alt={link.platform}
                     className="pe-3 mouse-cursor img-fluid"
                   />
@@ -81,39 +73,23 @@ const Footer = () => {
           <div className="col-md-12 col-lg-8 col-sm-12">
             <div className="row">
               <div className="col-md-4 col-sm-12 mb-4 text-center text-md-start">
-                <h4 className="footer-heading fw-semibold mouse-cursor">
-                  Company
-                </h4>
+                <h4 className="footer-heading fw-semibold mouse-cursor">Company</h4>
                 {footerNavigation.company.map((item, index) => (
-                  <p
-                    key={index}
-                    className="footer-heading-subtext mouse-cursor"
-                  >
-                    <Link
-                      to={item.href}
-                      className="text-decoration-none text-reset"
-                    >
+                  <p key={index} className="footer-heading-subtext mouse-cursor">
+                    <a href={item.href} className="text-decoration-none text-reset">
                       {item.label}
-                    </Link>
+                    </a>
                   </p>
                 ))}
               </div>
 
               <div className="col-md-4 col-sm-12 mb-4 text-center text-md-start">
-                <h4 className="footer-heading fw-semibold mouse-cursor">
-                  Support
-                </h4>
+                <h4 className="footer-heading fw-semibold mouse-cursor">Support</h4>
                 {footerNavigation.support.map((item, index) => (
-                  <p
-                    key={index}
-                    className="footer-heading-subtext mouse-cursor"
-                  >
-                    <Link
-                      to={item.href}
-                      className="text-decoration-none text-reset"
-                    >
+                  <p key={index} className="footer-heading-subtext mouse-cursor">
+                    <a href={item.href} className="text-decoration-none text-reset">
                       {item.label}
-                    </Link>
+                    </a>
                   </p>
                 ))}
               </div>
@@ -126,10 +102,8 @@ const Footer = () => {
                     className="email-section rounded"
                     placeholder="Your email address"
                   />
-                  <FontAwesomeIcon
-                    icon={faPaperPlane}
-                    className="sendButton position-absolute"
-                  />
+                    <FontAwesomeIcon icon={faPaperPlane} className="sendButton position-absolute" />
+                 
                 </div>
               </div>
             </div>
@@ -137,7 +111,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

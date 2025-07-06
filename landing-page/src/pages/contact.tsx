@@ -1,6 +1,4 @@
 import type { FormEvent } from "react";
-import Nabar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -10,7 +8,6 @@ const Contact = () => {
 
   return (
     <>
-    <Nabar/>
       <div className="container mt-5 d-flex justify-content-center">
         <form className="form-shadow" onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -82,7 +79,6 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <Footer/>
     </>
   );
 };

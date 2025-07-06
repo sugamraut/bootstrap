@@ -1,3 +1,4 @@
+
 import Nabar from "../components/Navbar";
 import Slider from "../components/Slider";
 import Client from "../components/Client";
@@ -7,19 +8,22 @@ import ImpactStauts from "../components/ImpactStatus";
 import Blog from "../components/Blog";
 import Frame from "../components/Frame";
 import Footer from "../components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import "../assets/css/main.scss";
+
 
 function LandingPage() {
   return (
     <>
-      <Nabar />
-
-      <Slider />
-
-      <Client />
-
+      <div className="bg-light py-2">
+        <Nabar />
+      </div>
+      <div className="bg-light">
+        <div className="container">
+          <Slider />
+        </div>
+      </div>
+      <div className="container mt-5">
+        <Client />
+      </div>
       <div className="container text-center">
         <Features />
       </div>
@@ -53,7 +57,7 @@ function LandingPage() {
       <div className="bg-light">
         <Frame />
       </div>
-      <Footer />
+      <Footer/>
     </>
   );
 }
