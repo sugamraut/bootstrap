@@ -40,7 +40,7 @@ const ImpactStauts = () => {
   return (
     <div className="container">
       <div className="review-section row">
-        <div className="col-6 text-center col-sm-12 col-md-6">
+        <div className=" text-center col-sm-12 col-md-6">
           <h1 className="heading fw-semibold">{impactData.title}</h1>
           <p className="heading-text fw-normal">{impactData.description}</p>
         </div>

@@ -52,7 +52,7 @@ const Blog = () => {
 
         <div className="row text-center">
           {blogs.articles.map((article, index) => (
-            <div className="col-4" key={index}>
+            <div className="col-md-4 col-xl-4 col-xxl-4" key={index}>
               <div className="card card-custom">
                 <div className="image-wrapper blog-image-wrapper">
                   <img

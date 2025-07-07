@@ -4,15 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Frame = () => {
-  type FarmeData = {
+  const base_Url = import.meta.env.VITE_BASE_URL;
+  type Farmetype = {
     title: string;
     ctaText: string;
   };
-  const [farmeData, SetFarmeData] = useState<FarmeData | null>(null);
+  const [farmeData, SetFarmeData] = useState<Farmetype | null>(null);
   const featchFameData = async () => {
-    const base_Url = import.meta.env.VITE_BASE_URL;
     try {
-      const response = await axios.get(`${base_Url}cat.json`);
+      const response = await axios.get(`${base_Url}cta.json`
+      );
       if (response.data.status === "success") {
         SetFarmeData(response.data.data);
       }

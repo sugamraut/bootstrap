@@ -42,7 +42,7 @@ function Features() {
       </div>
       <p className="heading-text">{featureData.subtitle}</p>
 
-      <div className="row gap-4 mt-5">
+      <div className="row gap-3 mt-5">
         {featureData.features.map((feature, index) => (
           <div className="col" key={index}>
             <div className="cards text-center">

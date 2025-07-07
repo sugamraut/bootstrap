@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import footerimage from "../assets/image/favicon-32x32.png"
 import {
   faFacebook,
   faInstagram,
@@ -64,7 +65,7 @@ const Footer = () => {
         <div className="row text-md-center">
           <div className="col-lg-4 col-sm-12 mb-4 text-center text-md-start">
             <div className="d-flex align-items-center">
-              <img src="./image/footerimage.png" alt="logo" />
+              <img src={footerimage} alt="logo" />
               <h2 className="footer-company-name fw-bolder ms-2">Nexcent</h2>
             </div>
             <p className="gap-4 mt-3 footer-section-text fs-normal">

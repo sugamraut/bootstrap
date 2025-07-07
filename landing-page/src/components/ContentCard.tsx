@@ -52,7 +52,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
     <div className="row mt-5">
       {type !== "customer" && (
         <>
-          <div className="col-4">
+          <div className="col-md-4 col-xl-4 col-xxl-4 content-card-img-section">
             <img src={`https://landing-2vb.pages.dev${data.imageUrl}`} alt={data.title} className="img-fluid" />
           </div>
           <div className="col-lg-8 col-md-8 text-start pt-5 unlock">

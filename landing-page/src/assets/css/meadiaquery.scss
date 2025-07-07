@@ -101,13 +101,20 @@
     align-items: center;
     justify-content: center;
   }
-}
-@media (max-width: 768px) {
-  .slider-image-wrapper {
-    height: 200px;
+  .content-card-img-section{
+    max-width: 100% !important;
+    width: 100%;
   }
-  .slider-text {
-    font-size: 28px;
-    line-height: 36px;
-  }
+  .row>*{
+  padding-right: 0px !important;
 }
+}
+// @media (max-width: 768px) {
+//   .slider-image-wrapper {
+//     height: 200px;
+//   }
+//   .slider-text {
+//     font-size: 28px;
+//     line-height: 36px;
+//   }
+// }
