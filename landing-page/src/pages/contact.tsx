@@ -1,4 +1,6 @@
 import type { FormEvent } from "react";
+import Nabar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -8,11 +10,12 @@ const Contact = () => {
 
   return (
     <>
-      <div className="container mt-5 d-flex justify-content-center">
+    <Nabar/>
+      <div className="container mt-5 d-flex justify-content-center mb-4">
         <form className="form-shadow" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="firstName" className="form-label">
-              First Name <span className="text-danger">*</span>
+              First Name <span className="text-danger name-field">*</span>
             </label>
             <input
               type="text"
@@ -79,6 +82,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <Footer/>
     </>
   );
 };

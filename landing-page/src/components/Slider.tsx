@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Slider = () => {
+  const base_Url = import.meta.env.VITE_BASE_URL;
   type SliderItem = {
     title: string;
     subtitle: string;
@@ -14,9 +15,7 @@ const Slider = () => {
 
   const fetchSliderData = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/banner.json"
-      );
+      const response = await axios.get(`${base_Url}banner.json`);
       if (response.data.status === "success") {
         setHeaderData(response.data.data);
       }

@@ -5,6 +5,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
+  const base_url=import.meta.env.VITE_BASE_URL
   type Blog = {
     title:string;
     description:string;
@@ -24,8 +25,7 @@ const Blog = () => {
 
   const fetchBlogData = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/blog.json"
+      const response = await axios.get( `${base_url}blog.json`
       );
       console.log(response.data.message);
       if (response.data.status === "success") {

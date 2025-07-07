@@ -4,17 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 const Frame = () => {
-  type FarmeData={
-    title:string;
-    ctaText:string
-
-  }
-  const [farmeData, SetFarmeData] = useState<FarmeData|null>(null);
+  type FarmeData = {
+    title: string;
+    ctaText: string;
+  };
+  const [farmeData, SetFarmeData] = useState<FarmeData | null>(null);
   const featchFameData = async () => {
+    const base_Url = import.meta.env.VITE_BASE_URL;
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/cta.json"
-      );
+      const response = await axios.get(`${base_Url}cat.json`);
       if (response.data.status === "success") {
         SetFarmeData(response.data.data);
       }
@@ -37,7 +35,7 @@ const Frame = () => {
         </div>
         <button className="btn btn-success button-design mb-4">
           {farmeData.ctaText}
-          <FontAwesomeIcon icon={faArrowRightLong}/>
+          <FontAwesomeIcon icon={faArrowRightLong} />
         </button>
       </div>
     </section>

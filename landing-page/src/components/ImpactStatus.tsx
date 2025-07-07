@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const ImpactStauts = () => {
+   const base_Url=import.meta.env.VITE_BASE_URL
   type Impacttype = {
     title: string;
     description: string;
@@ -17,8 +18,8 @@ const ImpactStauts = () => {
 
   const fetchdata = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/impact-stats.json"
+      const response = await axios.get(`${base_Url}impact-stats.json`
+        
       );
       if (response.data.status === "success") {
         setImpactStatus(response.data.data);

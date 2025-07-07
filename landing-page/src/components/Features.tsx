@@ -14,9 +14,10 @@ function Features() {
   const [featureData, setFeatureData] = useState<FeatureType | null>(null);
 
   const fetchdata = async () => {
+     const base_Url=import.meta.env.VITE_BASE_URL
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/features.json"
+      const response = await axios.get(`${base_Url}features.json`
+        
       );
       if (response.data.status === "success") {
         setFeatureData(response.data.data);

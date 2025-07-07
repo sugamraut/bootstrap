@@ -5,6 +5,7 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 type constentType = {
+  
   imageUrl: string;
   title: string;
   description: string;
@@ -27,6 +28,8 @@ interface IcardProps {
 }
 
 const ContentCard = ({ apiUrl, type }: IcardProps) => {
+   const base_Url=import.meta.env.VITE_BASE_URL
+  
   const [data, setData] = useState<constentType | null>(null);
 
   const fetchData = async () => {

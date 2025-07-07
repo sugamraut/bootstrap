@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const Client = () => {
+  const base_Url=import.meta.env.VITE_BASE_URL
+
   type ClientData={
     title:string;
     description:string;
@@ -16,8 +18,7 @@ const Client = () => {
 
   const fetchClient = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/clients.json"
+      const response = await axios.get( `${base_Url}clients.json`
       );
       if (response.data.status === "success") {
         setSectionData(response.data.data);

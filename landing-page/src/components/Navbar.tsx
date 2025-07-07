@@ -4,6 +4,7 @@ import logo from "../assets/image/navbarlogo.png";
 import { Link } from "react-router-dom";
 
 const Nabar = () => {
+   const base_Url=import.meta.env.VITE_BASE_URL
   type NavItem = {
     logoUrl: string;
     navigation: {
@@ -20,8 +21,8 @@ const Nabar = () => {
 
   const fetchNavbar = async () => {
     try {
-      const response = await axios.get(
-        "https://landing-2vb.pages.dev/api/header.json"
+      const response = await axios.get( `${base_Url}header.json`
+        
       );
       if (response.data.status === "success") {
         setHeaderData(response.data.data);
