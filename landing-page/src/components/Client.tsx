@@ -42,7 +42,6 @@ const Client = () => {
       <div className="image-container row mt-3">
         <div className="d-flex justify-content-between">
           {sectionData.clientLogos.map((logo, index) => {
-            console.log({logo})
             return  <img
               key={index}
                src={`https://landing-2vb.pages.dev${logo}`}

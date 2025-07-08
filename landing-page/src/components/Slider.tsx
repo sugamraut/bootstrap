@@ -1,34 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "../store/store";
+import { Status } from "../globals/types";
+import { fetchSliderAsync } from "../store/sliderSlice";
 
 const Slider = () => {
-  const base_Url = import.meta.env.VITE_BASE_URL;
-  type SliderItem = {
-    title: string;
-    subtitle: string;
-    imageUrl: string;
-    ctaText: string;
-    ctaUrl: string;
-  };
-  const [headerData, setHeaderData] = useState<SliderItem[]>([]);
-
-  const fetchSliderData = async () => {
-    try {
-      const response = await axios.get(`${base_Url}banner.json`);
-      if (response.data.status === "success") {
-        setHeaderData(response.data.data);
-      }
-    } catch (error) {
-      console.error("Failed to fetch slider data:", error);
-    }
-  };
-
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: headerData, status } = useSelector(
+    (state: RootState) => state.slider
+  );
   useEffect(() => {
-    fetchSliderData();
-  }, []);
-
-  if (!headerData.length) return null;
+    if (status === Status.Loading) {
+      dispatch(fetchSliderAsync());
+    }
+  }, [dispatch, status]);
+  if (status === Status.Loading) {
+    return <div>Loading navbar...</div>;
+  }
+  if (status === Status.Error || !headerData) {
+    return <div>Failed to load navbar.</div>;
+  }
 
   return (
     <div id="carouselExampleIndicators" className="carousel slide">

@@ -25,10 +25,6 @@ const Navbar = () => {
   if (status === Status.Error || !headerData) {
     return <div>Failed to load navbar.</div>;
   }
-const hello = "demo";
-  console.log(headerData);
-    console.log(headerData.navigation);
-  console.log(headerData.authActions);
   return (
     
     <nav className="navbar navbar-expand-md navbar-light container container-xxl">
@@ -70,8 +66,6 @@ const hello = "demo";
               
             </Link>
           ))}
-          {/* {headerData} */}
-          {/* <pre>headerData</pre> */}
         </div>
       </div>
     </nav>

@@ -6,7 +6,7 @@ import axios from "axios";
 const base_Url = import.meta.env.VITE_BASE_URL;
 
 type NavItem = {
-   logoUrl: string;
+  logoUrl: string;
   brandName: string;
   navigation: {
     label: string;
@@ -48,14 +48,13 @@ const NavbarSlice = createSlice({
 export const { setNavbar, setStatus } = NavbarSlice.actions;
 export default NavbarSlice.reducer;
 
-
 export function fetchNavbarAsync() {
   return async function fetchNavbarThunk(dispatch: AppDispatch) {
     try {
       const response = await axios.get(`${base_Url}header.json`);
 
       if (response.data.status === "success") {
-        dispatch(setNavbar(response.data.data)); 
+        dispatch(setNavbar(response.data.data));
         dispatch(setStatus(Status.Success));
       } else {
         dispatch(setStatus(Status.Error));
