@@ -6,6 +6,7 @@ import featureSlice from "./featureSlice";
 import blogSlice from "./blogSlice";
 import farmeSlice from "./frameSlice"
 import impactSlice from "./impactSlice";
+import footerSlice from "./footerSlice";
 
 
 const store=configureStore({
@@ -17,6 +18,7 @@ const store=configureStore({
         blogs:blogSlice,
         farme:farmeSlice,
         impact:impactSlice,
+        footer:footerSlice,
     }
 })
 export default store

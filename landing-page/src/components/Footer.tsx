@@ -2,55 +2,34 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import footerimage from "../assets/image/favicon-32x32.png"
+import footerimage from "../assets/image/favicon-32x32.png";
 import {
   faFacebook,
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import type { AppDispatch, RootState } from "../store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { Status } from "../globals/types";
+import { featchfooterAsync } from "../store/footerSlice";
 
 const Footer = () => {
-  const base_Url = import.meta.env.VITE_BASE_URL;
-
-  type FooterType = {
-    socialLinks: {
-      platform: string;
-      url: string;
-    }[];
-    footerNavigation: {
-      company: {
-        label: string;
-        href: string;
-      }[];
-      support: {
-        label: string;
-        href: string;
-      }[];
-    };
-  };
-
-  const [footerData, setFooterData] = useState<FooterType | null>(null);
-
-  const fetchFooterData = async () => {
-    try {
-      const response = await axios.get(`${base_Url}footer.json`);
-      if (response.data.status === "success") {
-        setFooterData(response.data.data);
-      }
-    } catch (error) {
-      console.log("Something went wrong", error);
-    }
-  };
-
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: footerData, status } = useSelector(
+    (state: RootState) => state.footer
+  );
   useEffect(() => {
-    fetchFooterData();
-  }, []);
-
-  if (!footerData) {
-    return <div>Loading...</div>;
+    if (status === Status.Loading) {
+      dispatch(featchfooterAsync());
+    }
+  },[dispatch,status]);
+ if (status === Status.Loading) {
+    return <div> Loading client......</div>;
   }
-
+  if (status === Status.Error || !footerData) {
+    return <div>failed to navbar ......</div>;
+  }
   const { socialLinks, footerNavigation } = footerData;
 
   const iconMap: Record<string, any> = {
