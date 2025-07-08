@@ -28,7 +28,7 @@ interface IcardProps {
 }
 
 const ContentCard = ({ apiUrl, type }: IcardProps) => {
-   const base_Url=import.meta.env.VITE_BASE_URL
+
   
   const [data, setData] = useState<constentType | null>(null);
 

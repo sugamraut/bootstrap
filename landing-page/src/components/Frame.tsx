@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
