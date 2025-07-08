@@ -2,30 +2,27 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from "../store/store";
+import { Status } from "../globals/types";
+import { featchFarmeAsync } from "../store/frameSlice";
 
 const Frame = () => {
-  const base_Url = import.meta.env.VITE_BASE_URL;
-  type Farmetype = {
-    title: string;
-    ctaText: string;
-  };
-  const [farmeData, SetFarmeData] = useState<Farmetype | null>(null);
-  const featchFameData = async () => {
-    try {
-      const response = await axios.get(`${base_Url}cta.json`
-      );
-      if (response.data.status === "success") {
-        SetFarmeData(response.data.data);
-      }
-    } catch (error) {
-      console.log("error somethiong went wrong !!!");
-    }
-  };
+  const dispatch = useDispatch<AppDispatch>();
+
+  const { data: farmeData, status } = useSelector(
+    (state: RootState) => state.farme
+  );
   useEffect(() => {
-    featchFameData();
-  }, []);
-  if (!farmeData) {
-    return <div>Loading....</div>;
+    if (status === Status.Loading) {
+      dispatch(featchFarmeAsync());
+    }
+  }, [dispatch, status]);
+  if (status === Status.Loading) {
+    return <div>Loading navbar...</div>;
+  }
+  if (status === Status.Error || !farmeData) {
+    return <div>Failed to load navbar.</div>;
   }
 
   return (

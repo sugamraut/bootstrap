@@ -4,6 +4,7 @@ import sliderSlice from "./sliderSlice";
 import clientSlice from "./clientSlice";
 import featureSlice from "./featureSlice";
 import blogSlice from "./blogSlice";
+import farmeSlice from "./frameSlice"
 
 
 const store=configureStore({
@@ -13,6 +14,7 @@ const store=configureStore({
         client:clientSlice,
         feature:featureSlice,
         blogs:blogSlice,
+        farme:farmeSlice,
     }
 })
 export default store
