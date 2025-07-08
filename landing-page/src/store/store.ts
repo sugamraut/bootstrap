@@ -1,11 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import NavbarSlice from "./NavbarSlice"
 import sliderSlice from "./sliderSlice";
+import clientSlice from "./clientSlice";
+import featureSlice from "./featureSlice";
 
 const store=configureStore({
     reducer:{
         navbar:NavbarSlice,
-        slider:sliderSlice
+        slider:sliderSlice,
+        client:clientSlice,
+        feature:featureSlice,
     }
 })
 export default store

@@ -1,38 +1,25 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "../store/store";
+import { Status } from "../globals/types";
+import { featchFeatureAsync } from "../store/featureSlice";
 
 function Features() {
-  type FeatureType = {
-    title: string;
-    subtitle: string;
-    features: {
-      iconUrl: string;
-      title: string;
-      description: string;
-    }[];
-  };
-  const [featureData, setFeatureData] = useState<FeatureType | null>(null);
-
-  const fetchdata = async () => {
-     const base_Url=import.meta.env.VITE_BASE_URL
-    try {
-      const response = await axios.get(`${base_Url}features.json`
-        
-      );
-      if (response.data.status === "success") {
-        setFeatureData(response.data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching feature data:", error);
-    }
-  };
-
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: featureData, status } = useSelector(
+    (state: RootState) => state.feature
+  );
   useEffect(() => {
-    fetchdata();
-  }, []);
-
-  if (!featureData) {
-    return <div>Loading...</div>;
+    if (status === Status.Loading) {
+      dispatch(featchFeatureAsync());
+    }
+  }, [dispatch, status]);
+  if (status === Status.Loading) {
+    return <div>Loading navbar...</div>;
+  }
+  if (status === Status.Error || !featureData) {
+    return <div>Failed to load navbar.</div>;
   }
 
   return (

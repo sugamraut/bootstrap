@@ -1,37 +1,26 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState, AppDispatch } from "../store/store";
+import { Status } from "../globals/types";
+import { fetchClientAsync } from "../store/clientSlice";
 
 const Client = () => {
-  const base_Url=import.meta.env.VITE_BASE_URL
-
-  type ClientData={
-    title:string;
-    description:string;
-    clientLogos:{
-      clientLogos: string | undefined;
-      logo:string|undefined;
-      index:number|undefined;
-    }[];
-
-  }
-  const [sectionData, setSectionData] = useState <ClientData|null >(null);
-
-  const fetchClient = async () => {
-    try {
-      const response = await axios.get( `${base_Url}clients.json`
-      );
-      if (response.data.status === "success") {
-        setSectionData(response.data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching feature data:", error);
-    }
-  };
-
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: sectionData, status } = useSelector(
+    (state: RootState) => state.client
+  );
   useEffect(() => {
-    fetchClient();
-  }, []);
-  if (!sectionData) return <div>Loading...</div>;
+    if (status === Status.Loading) {
+      dispatch(fetchClientAsync());
+    }
+  }, [dispatch, status]);
+
+  if (status === Status.Loading) {
+    return <div> Loading client......</div>;
+  }
+  if (status === Status.Error || !sectionData) {
+    return <div>failed to navbar ......</div>;
+  }
 
   return (
     <>
@@ -42,12 +31,14 @@ const Client = () => {
       <div className="image-container row mt-3">
         <div className="d-flex justify-content-between">
           {sectionData.clientLogos.map((logo, index) => {
-            return  <img
-              key={index}
-               src={`https://landing-2vb.pages.dev${logo}`}
-              alt={`client-logo-${index}`}
-              className="m-2"
-            />
+            return (
+              <img
+                key={index}
+                src={`https://landing-2vb.pages.dev${logo}`}
+                alt={`client-logo-${index}`}
+                className="m-2"
+              />
+            );
           })}
         </div>
       </div>
