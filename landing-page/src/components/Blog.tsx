@@ -26,44 +26,6 @@ const Blog = () => {
   if (status === Status.Error || !blog) {
     return <div>Failed to load navbar.</div>;
   }
-  // const base_url=import.meta.env.VITE_BASE_URL
-  // type Blog = {
-  //   title:string;
-  //   description:string;
-  //   articles:{
-  //     ctaText: string;
-  //     title: string;
-  //     ctaUrl: string | undefined;
-  //     imageUrl: string | undefined;
-  //     article:string;
-  //     index:number;
-  //   }[];
-
-
-
-  // };
-  // const [blogs, setBlogs] = useState<Blog | null>(null);
-
-  // const fetchBlogData = async () => {
-  //   try {
-  //     const response = await axios.get( `${base_url}blog.json`
-  //     );
-  //     console.log(response.data.message);
-  //     if (response.data.status === "success") {
-  //       setBlogs(response.data.data);
-  //     }
-  //   } catch (error) {
-  //     console.log("fetching data error from blog", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   fetchBlogData();
-  // }, []);
-
-  // if (!blogs) {
-  //   return <div>Loading...</div>;
-
 
   return (
     <div>
