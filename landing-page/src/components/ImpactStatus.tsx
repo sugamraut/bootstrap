@@ -23,7 +23,7 @@ const ImpactStauts = () => {
   }
 
   return (
-    <div className="container">
+     <div className="bg-light"><div className="container">
       <div className="review-section row">
         <div className=" text-center col-sm-12 col-md-6">
           <h1 className="heading fw-semibold">{impactData.title}</h1>
@@ -50,7 +50,8 @@ const ImpactStauts = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
+    
   );
 };
 

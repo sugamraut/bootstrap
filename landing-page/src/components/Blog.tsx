@@ -28,7 +28,7 @@ const Blog = () => {
   }
 
   return (
-    <div>
+    <div className="container text-center">
       <div className="mt-5 text-center">
         <h6 className="heading fw-semibold">{blog.title}</h6>
         <p className="fs-normal heading-text">{blog.description}</p>

@@ -23,7 +23,7 @@ const Client = () => {
   }
 
   return (
-    <>
+    <div className="container mt-5">
       <div className="text-center">
         <h6 className="heading">{sectionData.title}</h6>
         <p className="heading-text">{sectionData.description}</p>
@@ -42,7 +42,7 @@ const Client = () => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

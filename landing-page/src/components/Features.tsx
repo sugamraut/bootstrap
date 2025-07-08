@@ -22,7 +22,7 @@ function Features() {
   }
 
   return (
-    <>
+    <div className="container text-center">
       <div className="mt-5">
         <h6 className="heading fw-semibold">{featureData.title}</h6>
       </div>
@@ -45,7 +45,7 @@ function Features() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

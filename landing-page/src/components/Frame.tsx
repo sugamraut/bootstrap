@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
@@ -26,17 +25,19 @@ const Frame = () => {
   }
 
   return (
-    <section className="container">
-      <div className="text-center">
-        <div className="text-center mt-5">
-          <h6 className="section-text fw-semibold">{farmeData.title}</h6>
+    <div className="bg-light">
+      <section className="container">
+        <div className="text-center">
+          <div className="text-center mt-5">
+            <h6 className="section-text fw-semibold">{farmeData.title}</h6>
+          </div>
+          <button className="btn btn-success button-design mb-4">
+            {farmeData.ctaText}
+            <FontAwesomeIcon icon={faArrowRightLong} />
+          </button>
         </div>
-        <button className="btn btn-success button-design mb-4">
-          {farmeData.ctaText}
-          <FontAwesomeIcon icon={faArrowRightLong} />
-        </button>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 export default Frame;

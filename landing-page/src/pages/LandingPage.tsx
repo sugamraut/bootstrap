@@ -1,4 +1,3 @@
-
 import Nabar from "../components/Navbar";
 import Slider from "../components/Slider";
 import Client from "../components/Client";
@@ -9,39 +8,29 @@ import Blog from "../components/Blog";
 import Frame from "../components/Frame";
 import Footer from "../components/Footer";
 
-
 function LandingPage() {
   return (
     <>
-      <div className="bg-light py-2">
-        <Nabar />
-      </div>
-      <div className="bg-light">
-        <div className="container">
-          <Slider />
-        </div>
-      </div>
-      <div className="container mt-5">
-        <Client />
-      </div>
-      <div className="container text-center">
-        <Features />
-      </div>
-      <div className="container">
-        <ContentCard
-          apiUrl={"https://landing-2vb.pages.dev/api/case-study.json"}
-          type={"caseStudy"}
-        />
-      </div>
-      <div className="bg-light">
-        <ImpactStauts />
-      </div>
-      <div className="container">
-        <ContentCard
-          apiUrl={"https://landing-2vb.pages.dev/api/articlehighlight.json"}
-          type={"article"}
-        />
-      </div>
+      <Nabar />
+
+      <Slider />
+
+      <Client />
+
+      <Features />
+
+      <ContentCard
+        apiUrl={"https://landing-2vb.pages.dev/api/case-study.json"}
+        type={"caseStudy"}
+      />
+
+      <ImpactStauts />
+
+      <ContentCard
+        apiUrl={"https://landing-2vb.pages.dev/api/articlehighlight.json"}
+        type={"article"}
+      />
+
       <div className="bg-light">
         <div className="container">
           <ContentCard
@@ -50,14 +39,13 @@ function LandingPage() {
           />
         </div>
       </div>
-      <div className="container text-center">
-        <Blog />
-      </div>
+
+      <Blog />
 
       <div className="bg-light">
         <Frame />
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

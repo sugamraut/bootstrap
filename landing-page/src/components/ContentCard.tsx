@@ -5,7 +5,6 @@ import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 type constentType = {
-  
   imageUrl: string;
   title: string;
   description: string;
@@ -15,12 +14,11 @@ type constentType = {
   authorName: string;
   quote: string;
   authorPosition: string;
-  clientIcons?:{
+  clientIcons?: {
     clientIcons: string | undefined;
-    icon:any;
-    index:string;
+    icon: any;
+    index: string;
   }[];
-
 };
 interface IcardProps {
   apiUrl: string;
@@ -28,8 +26,6 @@ interface IcardProps {
 }
 
 const ContentCard = ({ apiUrl, type }: IcardProps) => {
-
-  
   const [data, setData] = useState<constentType | null>(null);
 
   const fetchData = async () => {
@@ -49,59 +45,65 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
   if (!data) return <div>Loading...</div>;
 
   return (
-    <div className="row mt-5">
-      {type !== "customer" && (
-        <>
-          <div className="col-md-4 col-xl-4 col-xxl-4 content-card-img-section">
-            <img src={`https://landing-2vb.pages.dev${data.imageUrl}`} alt={data.title} className="img-fluid" />
-          </div>
-          <div className="col-lg-8 col-md-8 text-start pt-5 unlock">
-            <h6 className="heading fw-bold ">{data.title}</h6>
-            <p className="contents">{data.description}</p>
-            <Link to={data.ctaUrl} className="  mouse-cursor">
-              <span className="button-text">{data.ctaText}</span>
-            </Link>
-          </div>
-        </>
-      )}
-
-      {type === "customer" && (
-        <>
-          <div className="col-lg-2 col-md-2">
-            <img
-              src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
-              alt={data.authorName}
-              className="img-fluid"
-            />
-          </div>
-          <div className="col-lg-10 col-md-10 text-start pt-3">
-            <blockquote>{data.quote}</blockquote>
-            <p>
-              <strong>{data.authorName}</strong>
-              <br />
-              {data.authorPosition}
-            </p>
-
-            <div className="d-flex flex-wrap mt-3">
-              {data.clientIcons?.map((icon, index) => (
-                <img
-                  key={index}
-                  src={`https://landing-2vb.pages.dev${icon}`}
-                  alt={`client-logo-${index}`}
-                  className="me-3 mb-2"
-                  style={{ width: 50 }}
-                />
-              ))}
-              <a href={data.ctaUrl} className="mouse-cursor link-design">
-                <h6>
-                  {data.ctaText}
-                  <FontAwesomeIcon icon={faArrowRightLong} />
-                </h6>
-              </a>
+    <div className="container">
+      <div className="row mt-5">
+        {type !== "customer" && (
+          <>
+            <div className="col-md-4 col-xl-4 col-xxl-4 content-card-img-section">
+              <img
+                src={`https://landing-2vb.pages.dev${data.imageUrl}`}
+                alt={data.title}
+                className="img-fluid"
+              />
             </div>
-          </div>
-        </>
-      )}
+            <div className="col-lg-8 col-md-8 text-start pt-5 unlock">
+              <h6 className="heading fw-bold ">{data.title}</h6>
+              <p className="contents">{data.description}</p>
+              <Link to={data.ctaUrl} className="  mouse-cursor">
+                <span className="button-text">{data.ctaText}</span>
+              </Link>
+            </div>
+          </>
+        )}
+
+        {type === "customer" && (
+          <>
+            <div className="col-lg-2 col-md-2">
+              <img
+                src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
+                alt={data.authorName}
+                className="img-fluid"
+              />
+            </div>
+            <div className="col-lg-10 col-md-10 text-start pt-3">
+              <blockquote>{data.quote}</blockquote>
+              <p>
+                <strong>{data.authorName}</strong>
+                <br />
+                {data.authorPosition}
+              </p>
+
+              <div className="d-flex flex-wrap mt-3">
+                {data.clientIcons?.map((icon, index) => (
+                  <img
+                    key={index}
+                    src={`https://landing-2vb.pages.dev${icon}`}
+                    alt={`client-logo-${index}`}
+                    className="me-3 mb-2"
+                    style={{ width: 50 }}
+                  />
+                ))}
+                <a href={data.ctaUrl} className="mouse-cursor link-design">
+                  <h6>
+                    {data.ctaText}
+                    <FontAwesomeIcon icon={faArrowRightLong} />
+                  </h6>
+                </a>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

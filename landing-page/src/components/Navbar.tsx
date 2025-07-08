@@ -1,4 +1,4 @@
-import  { useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../assets/image/navbarlogo.png";
@@ -26,49 +26,49 @@ const Navbar = () => {
     return <div>Failed to load navbar.</div>;
   }
   return (
-    
-    <nav className="navbar navbar-expand-md navbar-light container container-xxl">
-      <Link className="navbar-brand d-flex align-items-center" to="/">
-        <img src={logo} alt="Logo" width="30" className="me-2 navbar-logo" />
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
+    <div className="bg-light py-2">
+      <nav className="navbar navbar-expand-md navbar-light container container-xxl">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img src={logo} alt="Logo" width="30" className="me-2 navbar-logo" />
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-      <div
-        className="collapse navbar-collapse justify-content-between"
-        id="navbarNav"
-      >
-        <ul className="navbar-nav mx-auto text-center text-md-start">
-          {headerData.navigation?.map((item, index) => (
-            <li className="nav-item" key={index}>
-              <a className="nav-link mx-2" href={item.href}>
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="d-flex flex-md-row align-items-center gap-2 mt-3 mt-md-0">
-          {headerData.authActions?.map((action, index) => (
-            <Link
-              key={index}
-              to={action.href}
-              className={`nav-btn ${
-                action.label.toLowerCase() === "login" ? "login" : "signup"
-              } navbar-list fw-medium`}
-            >
-              {action.label}
-              
-            </Link>
-          ))}
+        <div
+          className="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav mx-auto text-center text-md-start">
+            {headerData.navigation?.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a className="nav-link mx-2" href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="d-flex flex-md-row align-items-center gap-2 mt-3 mt-md-0">
+            {headerData.authActions?.map((action, index) => (
+              <Link
+                key={index}
+                to={action.href}
+                className={`nav-btn ${
+                  action.label.toLowerCase() === "login" ? "login" : "signup"
+                } navbar-list fw-medium`}
+              >
+                {action.label}
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

@@ -24,7 +24,9 @@ const Slider = () => {
   }
 
   return (
-    <div id="carouselExampleIndicators" className="carousel slide">
+     <div className="bg-light">
+        <div className="container">
+          <div id="carouselExampleIndicators" className="carousel slide">
       <div className="carousel-indicators">
         {headerData.map((_, index) => (
           <button
@@ -81,6 +83,10 @@ const Slider = () => {
         ))}
       </div>
     </div>
+
+        </div>
+        </div>
+    
   );
 };
 
