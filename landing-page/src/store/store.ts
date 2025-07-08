@@ -3,6 +3,8 @@ import NavbarSlice from "./NavbarSlice"
 import sliderSlice from "./sliderSlice";
 import clientSlice from "./clientSlice";
 import featureSlice from "./featureSlice";
+import blogSlice from "./blogSlice";
+
 
 const store=configureStore({
     reducer:{
@@ -10,6 +12,7 @@ const store=configureStore({
         slider:sliderSlice,
         client:clientSlice,
         feature:featureSlice,
+        blogs:blogSlice,
     }
 })
 export default store

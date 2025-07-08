@@ -3,55 +3,76 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import type { RootState, AppDispatch } from "../store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { Status } from "../globals/types";
+import { featchBlogAsync } from "../store/blogSlice";
+
 
 const Blog = () => {
-  const base_url=import.meta.env.VITE_BASE_URL
-  type Blog = {
-    title:string;
-    description:string;
-    articles:{
-      ctaText: string;
-      title: string;
-      ctaUrl: string | undefined;
-      imageUrl: string | undefined;
-      article:string;
-      index:number;
-    }[];
 
-
-
-  };
-  const [blogs, setBlogs] = useState<Blog | null>(null);
-
-  const fetchBlogData = async () => {
-    try {
-      const response = await axios.get( `${base_url}blog.json`
-      );
-      console.log(response.data.message);
-      if (response.data.status === "success") {
-        setBlogs(response.data.data);
-      }
-    } catch (error) {
-      console.log("fetching data error from blog", error);
-    }
-  };
-
+   const dispatch = useDispatch<AppDispatch>();
+     const { data:blog, status } = useSelector(
+    (state: RootState) => state.blogs
+  );
   useEffect(() => {
-    fetchBlogData();
-  }, []);
-
-  if (!blogs) {
-    return <div>Loading...</div>;
+      if (status === Status.Loading) {
+        dispatch(featchBlogAsync());
+      }
+    }, [dispatch, status]);
+  if (status===Status.Loading){
+     return <div>Loading navbar...</div>;
   }
+  if (status === Status.Error || !blog) {
+    return <div>Failed to load navbar.</div>;
+  }
+  // const base_url=import.meta.env.VITE_BASE_URL
+  // type Blog = {
+  //   title:string;
+  //   description:string;
+  //   articles:{
+  //     ctaText: string;
+  //     title: string;
+  //     ctaUrl: string | undefined;
+  //     imageUrl: string | undefined;
+  //     article:string;
+  //     index:number;
+  //   }[];
+
+
+
+  // };
+  // const [blogs, setBlogs] = useState<Blog | null>(null);
+
+  // const fetchBlogData = async () => {
+  //   try {
+  //     const response = await axios.get( `${base_url}blog.json`
+  //     );
+  //     console.log(response.data.message);
+  //     if (response.data.status === "success") {
+  //       setBlogs(response.data.data);
+  //     }
+  //   } catch (error) {
+  //     console.log("fetching data error from blog", error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   fetchBlogData();
+  // }, []);
+
+  // if (!blogs) {
+  //   return <div>Loading...</div>;
+
 
   return (
     <div>
       <div className="mt-5 text-center">
-        <h6 className="heading fw-semibold">{blogs.title}</h6>
-        <p className="fs-normal heading-text">{blogs.description}</p>
+        <h6 className="heading fw-semibold">{blog.title}</h6>
+        <p className="fs-normal heading-text">{blog.description}</p>
 
         <div className="row text-center">
-          {blogs.articles.map((article, index) => (
+          {blog.articles.map((article, index) => (
             <div className="col-md-4 col-xl-4 col-xxl-4" key={index}>
               <div className="card card-custom">
                 <div className="image-wrapper blog-image-wrapper">
@@ -77,6 +98,6 @@ const Blog = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Blog;
