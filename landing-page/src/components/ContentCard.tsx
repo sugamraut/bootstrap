@@ -86,7 +86,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
               {data.clientIcons?.map((icon, index) => (
                 <img
                   key={index}
-                  src={`https://landing-2vb.pages.dev${icon.clientIcons}`}
+                  src={`https://landing-2vb.pages.dev${icon}`}
                   alt={`client-logo-${index}`}
                   className="me-3 mb-2"
                   style={{ width: 50 }}

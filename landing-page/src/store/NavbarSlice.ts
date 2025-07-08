@@ -6,12 +6,13 @@ import axios from "axios";
 const base_Url = import.meta.env.VITE_BASE_URL;
 
 type NavItem = {
+   logoUrl: string;
   brandName: string;
   navigation: {
     label: string;
     href: string;
   }[];
-  authAction: {
+  authActions: {
     label: string;
     href: string;
   }[];

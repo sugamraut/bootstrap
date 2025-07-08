@@ -1,52 +1,39 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import logo from "../assets/image/navbarlogo.png";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import logo from "../assets/image/navbarlogo.png";
+import type { RootState, AppDispatch } from "../store/store";
+import { fetchNavbarAsync } from "../store/NavbarSlice";
+import { Status } from "../globals/types";
 
-const Nabar = () => {
-   const base_Url=import.meta.env.VITE_BASE_URL
-  type NavItem = {
-    logoUrl: string;
-    navigation: {
-      label: string;
-      href: string;
-    }[];
-    authActions: {
-      label: string;
-      href: string;
-    }[];
-  };
+const Navbar = () => {
+  const dispatch = useDispatch<AppDispatch>();
 
-  const [headerData, setHeaderData] = useState<NavItem | null>(null);
-
-  const fetchNavbar = async () => {
-    try {
-      const response = await axios.get( `${base_Url}header.json`
-        
-      );
-      if (response.data.status === "success") {
-        setHeaderData(response.data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching navbar data:", error);
-    }
-  };
+  const { data: headerData, status } = useSelector(
+    (state: RootState) => state.navbar
+  );
 
   useEffect(() => {
-    fetchNavbar();
-  }, []);
+    if (status === Status.Loading) {
+      dispatch(fetchNavbarAsync());
+    }
+  }, [dispatch, status]);
 
-  if (!headerData) return null;
-
+  if (status === Status.Loading) {
+    return <div>Loading navbar...</div>;
+  }
+  if (status === Status.Error || !headerData) {
+    return <div>Failed to load navbar.</div>;
+  }
+const hello = "demo";
+  console.log(headerData);
+    console.log(headerData.navigation);
+  console.log(headerData.authActions);
   return (
+    
     <nav className="navbar navbar-expand-md navbar-light container container-xxl">
       <Link className="navbar-brand d-flex align-items-center" to="/">
-        <img
-          src={headerData.logoUrl || logo}
-          alt="Logo"
-          width="30"
-          className="me-2 navbar-logo"
-        />
+        <img src={logo} alt="Logo" width="30" className="me-2 navbar-logo" />
       </Link>
       <button
         className="navbar-toggler"
@@ -62,7 +49,7 @@ const Nabar = () => {
         id="navbarNav"
       >
         <ul className="navbar-nav mx-auto text-center text-md-start">
-          {headerData.navigation.map((item, index) => (
+          {headerData.navigation?.map((item, index) => (
             <li className="nav-item" key={index}>
               <a className="nav-link mx-2" href={item.href}>
                 {item.label}
@@ -71,7 +58,7 @@ const Nabar = () => {
           ))}
         </ul>
         <div className="d-flex flex-md-row align-items-center gap-2 mt-3 mt-md-0">
-          {headerData.authActions.map((action, index) => (
+          {headerData.authActions?.map((action, index) => (
             <Link
               key={index}
               to={action.href}
@@ -80,12 +67,15 @@ const Nabar = () => {
               } navbar-list fw-medium`}
             >
               {action.label}
+              
             </Link>
           ))}
+          {/* {headerData} */}
+          {/* <pre>headerData</pre> */}
         </div>
       </div>
     </nav>
   );
 };
 
-export default Nabar;
+export default Navbar;
