@@ -1,40 +1,25 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import type { AppDispatch, RootState } from "../store/store";
+import { useDispatch, useSelector } from "react-redux";
+import { Status } from "../globals/types";
+import { featchImpactAsync } from "../store/impactSlice";
 
 const ImpactStauts = () => {
-   const base_Url=import.meta.env.VITE_BASE_URL
-  type Impacttype = {
-    title: string;
-    description: string;
-    stats: {
-      value: any;
-      item: string;
-      index: number;
-      logoUrl: string;
-      label: string;
-    }[];
-  };
-  const [impactData, setImpactStatus] = useState<Impacttype | null>(null);
-
-  const fetchdata = async () => {
-    try {
-      const response = await axios.get(`${base_Url}impact-stats.json`
-        
-      );
-      if (response.data.status === "success") {
-        setImpactStatus(response.data.data);
-      }
-    } catch (error) {
-      console.error("Error fetching feature data:", error);
-    }
-  };
-
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: impactData, status } = useSelector(
+    (state: RootState) => state.impact
+  );
   useEffect(() => {
-    fetchdata();
-  }, []);
+    if (status === Status.Loading) {
+      dispatch(featchImpactAsync());
+    }
+  }, [dispatch, status]);
 
-  if (!impactData) {
-    return <div>Loading...</div>;
+  if (status === Status.Loading) {
+    return <div>Loading navbar...</div>;
+  }
+  if (status === Status.Error || !impactData) {
+    return <div>Failed to load navbar.</div>;
   }
 
   return (
@@ -51,7 +36,7 @@ const ImpactStauts = () => {
               <div key={index} className="col-6 col-sm-6 col-md-6 mb-4">
                 <div className="d-flex gap-2">
                   <img
-                  src={`https://landing-2vb.pages.dev${item.logoUrl}`}
+                    src={`https://landing-2vb.pages.dev${item.logoUrl}`}
                     className="mb-1 img-fluid"
                     alt={item.label}
                   />
