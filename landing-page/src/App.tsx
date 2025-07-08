@@ -5,7 +5,7 @@ import Contact from './pages/contact';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import"./assets/css/main.scss"
-
+import "./assets/css/meadiaquery.scss"
 
 const router = createBrowserRouter([
   {
