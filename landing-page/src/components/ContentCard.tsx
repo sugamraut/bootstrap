@@ -68,14 +68,14 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
 
         {type === "customer" && (
           <>
-            <div className="col-lg-2 col-md-2">
+            <div className="col-md-4 col-xl-4 col-xxl-4 pt-4 pb-3">
               <img
                 src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
                 alt={data.authorName}
                 className="img-fluid"
               />
             </div>
-            <div className="col-lg-10 col-md-10 text-start pt-3">
+            <div className="col-lg-8 col-md-8  text-start  pt-5  pb-4 ">
               <blockquote>{data.quote}</blockquote>
               <p>
                 <strong>{data.authorName}</strong>
