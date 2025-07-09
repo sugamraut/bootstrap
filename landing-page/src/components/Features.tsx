@@ -46,6 +46,7 @@ function Features() {
               <h6 className="heading fw-bold">{feature.title}</h6>
               <p className="heading-text fw-normal">{feature.description}</p>
             </div>
+            
           </div>
         ))}
       </div>

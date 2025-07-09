@@ -68,14 +68,14 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
 
         {type === "customer" && (
           <>
-            <div className="col-md-4 col-xl-4 col-xxl-4 pt-4 pb-3">
+            <div className="col-md-4 col-xl-4 col-xxl-4 customer-card ">
               <img
                 src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
                 alt={data.authorName}
                 className="img-fluid"
               />
             </div>
-            <div className="col-lg-8 col-md-8  text-start  pt-5  pb-4 ">
+            <div className="col-lg-8 col-md-8  text-start customer-card ">
               <blockquote>{data.quote}</blockquote>
               <p>
                 <strong>{data.authorName}</strong>
@@ -83,7 +83,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
                 {data.authorPosition}
               </p>
 
-              <div className="d-flex flex-wrap mt-3">
+              <div className="d-flex flex-wrap mt-3 justify-content-between ">
                 {data.clientIcons?.map((icon, index) => (
                   <img
                     key={index}
