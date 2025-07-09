@@ -32,7 +32,7 @@ const Frame = () => {
             <h6 className="section-text fw-semibold">{farmeData.title}</h6>
           </div>
           <button className="btn btn-success button-design mb-4">
-            {farmeData.ctaText}
+            {farmeData.ctaText}{" "}
             <FontAwesomeIcon icon={faArrowRightLong} />
           </button>
         </div>

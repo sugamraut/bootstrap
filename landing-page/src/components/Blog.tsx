@@ -48,7 +48,7 @@ const Blog = () => {
                 <div className="content-box">
                   <div className="card-title">{article.title}</div>
 
-                  <Link to="article.ctaUrl" className="read-more">
+                  <Link to="article.ctaUrl" className="read-more ">
                     {article.ctaText}
                     <FontAwesomeIcon icon={faArrowRightLong} />
                   </Link>

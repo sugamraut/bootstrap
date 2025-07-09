@@ -95,7 +95,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
                 ))}
                 <a href={data.ctaUrl} className="mouse-cursor link-design">
                   <h6>
-                    {data.ctaText}
+                    {data.ctaText } {" "}
                     <FontAwesomeIcon icon={faArrowRightLong} />
                   </h6>
                 </a>

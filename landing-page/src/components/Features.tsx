@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState, AppDispatch } from "../store/store";
 import { Status } from "../globals/types";
@@ -32,21 +32,19 @@ function Features() {
         {featureData.features.map((feature, index) => (
           <div className="col" key={index}>
             <div className="cards text-center position-relative">
-              <div className="feature-image position-absolute start-50 translate-middle">
-                <div>
+              <div className=" row text-center ">
+                <div className=" ">
                   <img
-                  src={`https://landing-2vb.pages.dev${feature.iconUrl}`}
-                  alt={feature.title}
-                  className="img-fluid"
-                />
-
+                    src={`https://landing-2vb.pages.dev${feature.iconUrl}`}
+                    alt={feature.title}
+                    className="img-fluid feature-image"
+                  />
                 </div>
-                
-              </div>
-              <h6 className="heading fw-bold">{feature.title}</h6>
+                 <h6 className="heading fw-bold">{feature.title}</h6>
               <p className="heading-text fw-normal">{feature.description}</p>
+              </div>
+             
             </div>
-            
           </div>
         ))}
       </div>

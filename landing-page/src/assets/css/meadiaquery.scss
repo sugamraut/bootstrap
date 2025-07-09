@@ -120,13 +120,29 @@
   .impact-image-design {
     padding: 8px 0px 8px 0px;
   }
+  .cards {
+    width: 300px;
+    left: 50px;
+    min-height: 300px;
+    padding: 24px 32px 24px 32px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(171, 190, 209, 0.2);
+    transition: transform 0.2s ease;
+    border: none;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    border-radius: 8px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slider-text {
     line-height: 40px;
     font-size: 40px;
   }
-   .slider-area {
+  .slider-area {
     flex-direction: column-reverse;
     text-align: center;
     padding-top: 48px;
@@ -209,13 +225,13 @@
     top: 50%;
     transform: translateY(-50%);
   }
- .email-section {
+  .email-section {
     background-color: rgba(255, 255, 255, 0.2705882353);
     padding: 6px 34px 6px 6px;
     border: none;
     border-radius: 8px;
     color: #d9dbe1;
-}
+  }
   .navbar-expand-md .navbar-nav .nav-link {
     padding-right: 0px;
     padding-left: 0px;
@@ -238,6 +254,17 @@
     color: #ffffff;
     top: 11px;
     right: 19px;
+  }
+  .content-box {
+    position: relative;
+    top: -82px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
   }
   // .signup {
   //   font-size: 16px;
@@ -291,6 +318,18 @@
     color: #ffffff;
     top: 11px;
     right: 19px;
-}
+  }
+  .content-box {
+    position: relative;
+    bottom: 78px;
+    /* overlap */
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
 }
 // padding: 6px 4px 6px 4px
