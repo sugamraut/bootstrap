@@ -52,7 +52,7 @@ const Footer = () => {
             </p>
             <p className="footer-section-text fs-normal">All rights reserved</p>
 
-            <div className="mt-4">
+            <div className="mt-4 ">
               {socialLinks.map((link, index) => {
                 const icon = iconMap[link.platform.toLowerCase()];
                 return (
@@ -65,8 +65,8 @@ const Footer = () => {
                     {icon ? (
                       <FontAwesomeIcon
                         icon={icon}
-                        size="xl"
-                        className="mouse-cursor"
+                        size="lg"
+                        className="mouse-cursor social-icon"
                       />
                     ) : (
                       link.platform

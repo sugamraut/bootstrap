@@ -133,7 +133,6 @@
   border-radius: 10px;
 }
 
-
 .card-title {
   font-size: 16px;
   font-weight: 500;
@@ -246,7 +245,6 @@ a {
   transition: background-color 0.3s ease;
 }
 
-
 .card.card-custom {
   height: 100%;
   display: flex;
@@ -265,4 +263,20 @@ a {
 .customer-card {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.footer-image {
+  background-color: red;
+}
+.social-icon {
+ 
+  padding: 6px;
+  background-color: #4a4e69;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.social-icon:hover {
+  transform: scale(1.1); 
+  background-color: #3a3e58; 
 }
