@@ -25,7 +25,7 @@ const ImpactStauts = () => {
   return (
      <div className="bg-light"><div className="container">
       <div className="review-section row">
-        <div className=" text-center col-sm-12 col-md-6">
+        <div className="col-sm-12 col-md-6">
           <h1 className="heading fw-semibold">{impactData.title}</h1>
           <p className="heading-text fw-normal">{impactData.description}</p>
         </div>

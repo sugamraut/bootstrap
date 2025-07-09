@@ -32,12 +32,10 @@ function LandingPage() {
       />
 
       <div className="bg-light">
-       
-          <ContentCard
-            apiUrl={"https://landing-2vb.pages.dev/api/customer.json"}
-            type={"customer"}
-          />
-        
+        <ContentCard
+          apiUrl={"https://landing-2vb.pages.dev/api/customer.json"}
+          type={"customer"}
+        />
       </div>
 
       <Blog />

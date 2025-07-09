@@ -28,16 +28,20 @@ function Features() {
       </div>
       <p className="heading-text">{featureData.subtitle}</p>
 
-      <div className="row gap-3 mt-5">
+      <div className="row gap-3 mt-5 feature-card">
         {featureData.features.map((feature, index) => (
           <div className="col" key={index}>
-            <div className="cards text-center">
-              <div>
-                <img
+            <div className="cards text-center position-relative">
+              <div className="feature-image position-absolute start-50 translate-middle">
+                <div>
+                  <img
                   src={`https://landing-2vb.pages.dev${feature.iconUrl}`}
                   alt={feature.title}
                   className="img-fluid"
                 />
+
+                </div>
+                
               </div>
               <h6 className="heading fw-bold">{feature.title}</h6>
               <p className="heading-text fw-normal">{feature.description}</p>

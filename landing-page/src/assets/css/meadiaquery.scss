@@ -213,7 +213,7 @@
     background-color: rgba(255, 255, 255, 0.2705882353);
     padding: 6px 34px 6px 6px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #d9dbe1;
 }
   .navbar-expand-md .navbar-nav .nav-link {
@@ -284,8 +284,13 @@
     width: 100%;
     padding: 6px 34px 6px 4px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     color: #d9dbe1;
   }
+  .sendButton {
+    color: #ffffff;
+    top: 11px;
+    right: 19px;
+}
 }
 // padding: 6px 4px 6px 4px
