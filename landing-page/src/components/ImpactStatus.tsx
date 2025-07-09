@@ -37,7 +37,7 @@ const ImpactStauts = () => {
                 <div className="d-flex gap-2">
                   <img
                     src={`https://landing-2vb.pages.dev${item.logoUrl}`}
-                    className="mb-1 img-fluid"
+                    className="mb-1 img-fluid impact-image-design"
                     alt={item.label}
                   />
                   <div>

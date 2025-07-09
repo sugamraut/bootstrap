@@ -1,4 +1,10 @@
 @media screen and (max-width: 576px) {
+  * {
+    padding: 0px;
+  }
+  .slider-wrapper {
+    padding: 0px;
+  }
   .navbar .navbar-collapse {
     position: fixed;
     top: 0;
@@ -111,6 +117,9 @@
   .sendButton {
     right: 85px !important;
   }
+  .impact-image-design {
+    padding: 8px 0px 8px 0px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slider-text {
@@ -198,13 +207,38 @@
   .sendButton {
     right: 141px;
   }
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .navbar {
+    -bs-navbar-brand-margin-end: 0rem;
+    -bs-navbar-nav-link-padding-x: 0rem;
+  }
+
 }
 @media screen and (max-width: 992px) {
+  
   .section-text {
     line-height: 56px;
     font-size: 42px;
     color: #263238;
   }
+  .navbar-logo {
+    width: 122px;
+  }
+  .sendButton {
+    color: #ffffff;
+    top: 11px;
+    right: 19px;
+  }
+  // .signup {
+  //   font-size: 16px;
+  //   width: 75px;
+  // }
+  // .login {
+  //   width: 62px;
+  // }
 }
 @media screen and (min-width: 992px) {
   .slider-image-wrapper {
@@ -235,4 +269,16 @@
     font-weight: 600;
     color: #4d4d4d;
   }
+  .impact-image-design {
+    padding-bottom: 14px;
+  }
+  .email-section {
+  background-color: #ffffff45;
+ width:100%;
+ padding: 6px 34px 6px 4px;
+  border: none;
+  border-radius: 6px;
+  color: #d9dbe1;
 }
+}
+    // padding: 6px 4px 6px 4px

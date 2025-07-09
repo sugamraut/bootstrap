@@ -25,7 +25,7 @@ const Slider = () => {
 
   return (
      <div className="bg-light">
-        <div className="container">
+        <div className="container slider-wrapper">
           <div id="carouselExampleIndicators" className="carousel slide">
       <div className="carousel-indicators">
         {headerData.map((_, index) => (
@@ -48,7 +48,7 @@ const Slider = () => {
             key={index}
           >
             <div className="slider-area row align-items-center">
-              <div className="col-6">
+              <div className="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <h1 className="slider-text">
                   {" "}
                   {(() => {

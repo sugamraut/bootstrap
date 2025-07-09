@@ -169,7 +169,7 @@ a {
   font-weight: 500;
   line-height: 0;
   top: 12px;
-    position: relative;
+  position: relative;
 }
 .footer-text {
   font-size: 64px;
@@ -208,10 +208,10 @@ a {
 }
 .email-section {
   background-color: #ffffff45;
-  width: 255px;
-  height: 40px;
-  padding-right: 34px;
-  padding-left: 10px;
+
+  padding: 6px 34px 6px 4px;
+  // padding-right: 34px;
+  // padding-left: 10px;
   border: none;
   border-radius: 6px;
   color: #d9dbe1;
@@ -278,4 +278,3 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-
