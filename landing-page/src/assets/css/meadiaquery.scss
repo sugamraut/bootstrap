@@ -99,7 +99,7 @@
     margin: 0px;
   }
   .slider-text {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 48px;
   }
   .row.unlock {
@@ -158,12 +158,15 @@
 @media screen and (max-width: 768px) {
   .slider-text {
     line-height: 40px;
-    font-size: 40px;
+    font-size: 36px;
   }
   .slider-area {
     flex-direction: column-reverse;
     text-align: center;
     padding-top: 48px;
+  }
+    .slider-image{
+    height: 250px;
   }
   .heading {
     line-height: 30px;
@@ -304,6 +307,9 @@
   }
   .impact-image-sizing {
     padding: 11px;
+  }
+  .slider-image{
+    height: 300px;
   }
 }
 @media screen and (min-width: 992px) {
