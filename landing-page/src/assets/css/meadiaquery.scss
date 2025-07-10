@@ -116,7 +116,7 @@
     padding-right: 0px !important;
   }
   .sendButton {
-    right: 85px !important;
+    right: 40px !important;
   }
   .impact-image-design {
     padding: 8px 0px 8px 0px;
@@ -133,11 +133,19 @@
     border-radius: 8px;
   }
   .button-design {
-   background-color: #4caf4f;
+    background-color: #4caf4f;
     padding: 6px 8px 8px 6px;
     border: none;
     border-radius: 4px;
   }
+  .form-control {
+    width: 90%;
+    display: unset;
+  }
+  .frame-part-spacing{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 }
 @media screen and (max-width: 768px) {
   .slider-text {
@@ -242,6 +250,10 @@
     -bs-navbar-brand-margin-end: 0rem;
     -bs-navbar-nav-link-padding-x: 0rem;
   }
+  .frame-part-spacing{
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
 }
 @media screen and (max-width: 992px) {
   .section-text {
@@ -268,6 +280,10 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     text-align: center;
   }
+  .frame-part-spacing{
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
   // .signup {
   //   font-size: 16px;
   //   width: 75px;
@@ -332,6 +348,10 @@
     width: 90%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     text-align: center;
+  }
+  .frame-part-spacing {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 // padding: 6px 4px 6px 4px

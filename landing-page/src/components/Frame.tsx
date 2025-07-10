@@ -27,14 +27,15 @@ const Frame = () => {
   return (
     <div className="bg-light">
       <section className="container">
-        <div className="text-center">
+        <div className="text-center frame-part-spacing">
           <div className="text-center mt-5">
             <h6 className="section-text fw-semibold">{farmeData.title}</h6>
           </div>
-          <button className="btn btn-success button-design mb-4">
-            {farmeData.ctaText}{" "}
-            <FontAwesomeIcon icon={faArrowRightLong} />
-          </button>
+          <div className="frame-part-spacing">
+            <button className="btn btn-success button-design mb-4">
+              {farmeData.ctaText} <FontAwesomeIcon icon={faArrowRightLong} />
+            </button>
+          </div>
         </div>
       </section>
     </div>
