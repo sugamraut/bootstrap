@@ -30,7 +30,7 @@ function Features() {
 
       <div className="row gap-3 mt-5 feature-card">
         {featureData.features.map((feature, index) => (
-          <div className="col" key={index}>
+          <div className="col d-flex justify-content-center" key={index}>
             <div className="cards text-center position-relative">
               <div className=" row text-center ">
                 <div className=" ">

@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
@@ -23,8 +22,8 @@ const Footer = () => {
     if (status === Status.Loading) {
       dispatch(featchfooterAsync());
     }
-  },[dispatch,status]);
- if (status === Status.Loading) {
+  }, [dispatch, status]);
+  if (status === Status.Loading) {
     return <div> Loading client......</div>;
   }
   if (status === Status.Error || !footerData) {
@@ -42,8 +41,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row text-md-center">
-          <div className="col-lg-4 col-sm-12 mb-4 text-center text-md-start">
-            <div className="d-flex align-items-center">
+          <div className="col-lg-4 col-sm-12 mb-4 text-center text-md-start text-sm-center">
+            <div className="d-flex align-items-center text-sm-">
               <img src={footerimage} alt="logo" />
               <h2 className="footer-company-name fw-bolder ms-2">Nexcent</h2>
             </div>
@@ -122,7 +121,7 @@ const Footer = () => {
                 <div className="position-relative footer-email-container">
                   <input
                     type="email"
-                    className="email-section rounded"
+                    className="email-section rounded form-control"
                     placeholder="Your email address"
                   />
                   <FontAwesomeIcon
