@@ -47,7 +47,7 @@ const Navbar = () => {
           <ul className="navbar-nav mx-auto text-center text-md-start">
             {headerData.navigation?.map((item, index) => (
               <li className="nav-item" key={index}>
-                <a className="nav-link mx-2" href={item.href}>
+                <a className="nav-link mx-auto" href={item.href}>
                   {item.label}
                 </a>
               </li>

@@ -138,22 +138,22 @@
     border: none;
     border-radius: 4px;
   }
-  .frame-part-spacing{
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.custom-css-for-row{
-  margin: 0px;
-}
-.navbar-brand {
+  .frame-part-spacing {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .custom-css-for-row {
+    margin: 0px;
+  }
+  .navbar-brand {
     padding-top: var(--bs-navbar-brand-padding-y);
     padding-bottom: var(--bs-navbar-brand-padding-y);
-    margin-right: 0px; 
+    margin-right: 0px;
     font-size: var(--bs-navbar-brand-font-size);
     color: var(--bs-navbar-brand-color);
     text-decoration: none;
     white-space: nowrap;
-}
+  }
 }
 @media screen and (max-width: 768px) {
   .slider-text {
@@ -258,10 +258,13 @@
     -bs-navbar-brand-margin-end: 0rem;
     -bs-navbar-nav-link-padding-x: 0rem;
   }
-  .frame-part-spacing{
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
+  .frame-part-spacing {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+  .impact-image-sizing {
+    padding-bottom: 14px;
+  }
 }
 @media screen and (max-width: 992px) {
   .section-text {
@@ -288,17 +291,20 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     text-align: center;
   }
-  .frame-part-spacing{
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-  // .signup {
-  //   font-size: 16px;
-  //   width: 75px;
-  // }
-  // .login {
-  //   width: 62px;
-  // }
+  .frame-part-spacing {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .nav-btn {
+    padding: 8px 6px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  .impact-image-sizing {
+    padding: 11px;
+  }
 }
 @media screen and (min-width: 992px) {
   .slider-image-wrapper {
@@ -329,7 +335,7 @@
     font-weight: 600;
     color: #4d4d4d;
   }
-  .impact-image-design {
+  .impact-image-sizing {
     padding-bottom: 14px;
   }
   .email-section {
