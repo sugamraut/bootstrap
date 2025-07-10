@@ -40,7 +40,7 @@ function Features() {
                     className="img-fluid image-postion-of-feature-section "
                   />
                 </div>
-                 <h6 className="heading fw-bold mt-4">{feature.title}</h6>
+                 <h6 className="heading fw-bold mt-5">{feature.title}</h6>
               <p className="heading-text fw-normal">{feature.description}</p>
               </div>
              
