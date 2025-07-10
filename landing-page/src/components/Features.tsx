@@ -28,11 +28,11 @@ function Features() {
       </div>
       <p className="heading-text">{featureData.subtitle}</p>
 
-      <div className="row gap-3 mt-5 feature-card">
+      <div className="row gap-3 mt-5 feature-card custom-css-for-row">
         {featureData.features.map((feature, index) => (
           <div className="col d-flex justify-content-center" key={index}>
             <div className="cards text-center position-relative">
-              <div className=" row text-center ">
+              <div className=" row text-center custom-css-for-row">
                 <div className=" ">
                   <img
                     src={`https://landing-2vb.pages.dev${feature.iconUrl}`}

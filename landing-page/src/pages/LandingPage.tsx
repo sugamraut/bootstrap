@@ -39,10 +39,7 @@ function LandingPage() {
       </div>
 
       <Blog />
-
-      <div className="bg-light">
-        <Frame />
-      </div>
+      <Frame />
       <Footer />
     </>
   );

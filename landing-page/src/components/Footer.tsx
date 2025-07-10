@@ -40,7 +40,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="row text-md-center">
+        <div className="row text-md-center custom-css-for-row">
           <div className="col-lg-4 col-sm-12 mb-4 text-center text-md-start text-sm-center">
             <div className="d-flex align-items-center text-sm-">
               <img src={footerimage} alt="logo" />
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
 
           <div className="col-md-12 col-lg-8 col-sm-12">
-            <div className="row">
+            <div className="row custom-css-for-row">
               <div className="col-md-4 col-sm-12 mb-4 text-center text-md-start">
                 <h4 className="footer-heading fw-semibold mouse-cursor">
                   Company

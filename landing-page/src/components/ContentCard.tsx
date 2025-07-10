@@ -46,7 +46,7 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
 
   return (
     <div className="container">
-      <div className="row mt-5">
+      <div className="row mt-5 custom-css-for-row">
         {type !== "customer" && (
           <>
             <div className="col-md-4 col-xl-4 col-xxl-4 content-card-img-section">

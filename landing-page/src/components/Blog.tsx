@@ -33,7 +33,7 @@ const Blog = () => {
         <h6 className="heading fw-semibold">{blog.title}</h6>
         <p className="fs-normal heading-text">{blog.description}</p>
 
-        <div className="row text-center">
+        <div className="row text-center custom-css-for-row">
           {blog.articles.map((article, index) => (
             <div className="col-md-4 col-xl-4 col-xxl-4" key={index}>
               <div className="card card-custom">

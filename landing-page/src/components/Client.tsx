@@ -28,7 +28,7 @@ const Client = () => {
         <h6 className="heading">{sectionData.title}</h6>
         <p className="heading-text">{sectionData.description}</p>
       </div>
-      <div className="image-container row mt-3">
+      <div className="image-container row mt-3 custom-css-for-row">
         <div className="d-flex justify-content-between">
           {sectionData.clientLogos.map((logo, index) => {
             return (
@@ -36,7 +36,7 @@ const Client = () => {
                 key={index}
                 src={`https://landing-2vb.pages.dev${logo}`}
                 alt={`client-logo-${index}`}
-                className="m-2"
+                className=""
               />
             );
           })}
