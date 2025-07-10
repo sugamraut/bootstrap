@@ -121,7 +121,7 @@ const Footer = () => {
                 <div className="position-relative footer-email-container">
                   <input
                     type="email"
-                    className="email-section rounded form-control"
+                    className="email-section form-control"
                     placeholder="Your email address"
                   />
                   <FontAwesomeIcon
