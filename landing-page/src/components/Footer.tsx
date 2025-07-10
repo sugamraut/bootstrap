@@ -28,7 +28,7 @@ const Footer = () => {
     return <div> Loading client......</div>;
   }
   if (status === Status.Error || !footerData) {
-    return <div>failed to navbar ......</div>;
+    return <div>failed to footer ......</div>;
   }
   const { socialLinks, footerNavigation } = footerData;
 

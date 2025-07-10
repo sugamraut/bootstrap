@@ -19,7 +19,7 @@ const Client = () => {
     return <div> Loading client......</div>;
   }
   if (status === Status.Error || !sectionData) {
-    return <div>failed to navbar ......</div>;
+    return <div>failed to load ......</div>;
   }
 
   return (

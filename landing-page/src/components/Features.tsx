@@ -15,10 +15,10 @@ function Features() {
     }
   }, [dispatch, status]);
   if (status === Status.Loading) {
-    return <div>Loading navbar...</div>;
+    return <div>Loading...</div>;
   }
   if (status === Status.Error || !featureData) {
-    return <div>Failed to load navbar.</div>;
+    return <div>Failed to load....</div>;
   }
 
   return (
