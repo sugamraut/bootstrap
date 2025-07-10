@@ -210,12 +210,13 @@ a {
   right: 28px;
 }
 
-.input-field-desigin {
+.input-field-desgin {
   background-color: rgba(255, 255, 255, 0.2705882353);
-  color: #d9dbe1;
   // background: linear-gradient(to right,#CF203E ,#ad8d8d , #505DA0);
 }
-
+.email-section:focus{
+  background-color: rgba(255, 255, 255, 0.2705882353);
+}
 .contact-form-button {
   background-color: #000000;
   border-radius: 6px;

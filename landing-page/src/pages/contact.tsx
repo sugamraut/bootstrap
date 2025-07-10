@@ -28,7 +28,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
-              className="form-control input-field-desigin"
+              className="form-control input-field-desgin"
               id="firstName"
               name="firstName"
               required
@@ -40,7 +40,7 @@ const Contact = () => {
             </label>
             <input
               type="text"
-              className="form-control input-field-desigin"
+              className="form-control input-field-desgin"
               id="lastName"
               name="lastName"
             />
@@ -51,7 +51,7 @@ const Contact = () => {
             </label>
             <input
               type="email"
-              className="form-control input-field-desigin contact-email-section"
+              className="form-control input-field-desgin contact-email-section"
               id="email"
               name="email"
               placeholder="@gmail.com"
@@ -73,7 +73,7 @@ const Contact = () => {
               </span>
               <input
                 type="tel"
-                className="form-control input-field-desigin"
+                className="form-control input-field-desgin"
                 id="phone"
                 name="phone"
                 required
