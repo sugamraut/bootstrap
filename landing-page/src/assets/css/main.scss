@@ -257,8 +257,12 @@ a {
 .feature-image {
   background-color: #e8f5e9;
   border-radius: 50% 80% / 70% 10%;
-  width: 50px;
-  top: 30px;
+  width: auto;
+}
+.image-postion-of-feature-section{
+      position: relative;
+    bottom: 13px;
+    right: 26px;
 }
 .customer-card {
   padding-top: 32px;
@@ -268,7 +272,6 @@ a {
   background-color: red;
 }
 .social-icon {
- 
   padding: 6px;
   background-color: #4a4e69;
   border-radius: 50%;
@@ -277,6 +280,6 @@ a {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .social-icon:hover {
-  transform: scale(1.1); 
-  background-color: #3a3e58; 
+  transform: scale(1.1);
+  background-color: #3a3e58;
 }

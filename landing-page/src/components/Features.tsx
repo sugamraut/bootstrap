@@ -33,14 +33,14 @@ function Features() {
           <div className="col d-flex justify-content-center" key={index}>
             <div className="cards text-center position-relative">
               <div className=" row text-center custom-css-for-row">
-                <div className=" ">
+                <div className=" feature-image position-absolute top-20 start-50 translate-middle">
                   <img
                     src={`https://landing-2vb.pages.dev${feature.iconUrl}`}
                     alt={feature.title}
-                    className="img-fluid feature-image"
+                    className="img-fluid image-postion-of-feature-section "
                   />
                 </div>
-                 <h6 className="heading fw-bold">{feature.title}</h6>
+                 <h6 className="heading fw-bold mt-4">{feature.title}</h6>
               <p className="heading-text fw-normal">{feature.description}</p>
               </div>
              
