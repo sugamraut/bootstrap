@@ -4,13 +4,22 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const formValues = {
+      firstName: formData.get("firstName")?.toString() || "",
+      lastName: formData.get("lastName")?.toString() || "",
+      email: formData.get("email")?.toString() || "",
+      phone: formData.get("phone")?.toString() || "",
+      message: formData.get("message")?.toString() || "",
+    };
+    console.log("Form Submission:", formValues);
     alert("Your message has been sent successfully!");
   };
 
   return (
     <>
-    <Nabar/>
+      <Nabar />
       <div className="container mt-5 d-flex justify-content-center mb-4">
         <form className="form-shadow" onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -21,6 +30,7 @@ const Contact = () => {
               type="text"
               className="form-control input-field-desigin"
               id="firstName"
+              name="firstName"
               required
             />
           </div>
@@ -32,6 +42,7 @@ const Contact = () => {
               type="text"
               className="form-control input-field-desigin"
               id="lastName"
+              name="lastName"
             />
           </div>
           <div className="mb-3 postion-relative">
@@ -42,6 +53,7 @@ const Contact = () => {
               type="email"
               className="form-control input-field-desigin contact-email-section"
               id="email"
+              name="email"
               placeholder="@gmail.com"
               required
             />
@@ -63,28 +75,31 @@ const Contact = () => {
                 type="tel"
                 className="form-control input-field-desigin"
                 id="phone"
+                name="phone"
                 required
               />
             </div>
           </div>
           <div className="mb-3">
-            <label htmlFor="message" className="form-label ">
+            <label htmlFor="message" className="form-label">
               Message
             </label>
             <textarea
               className="form-control input-field-desigin"
               id="message"
+              name="message"
               rows={3}
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-dark contact-form-button">
+          <button type="submit" className="btn btn-dark button-design ">
             Send Message
           </button>
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
 
 export default Contact;
+//contact-form-button
