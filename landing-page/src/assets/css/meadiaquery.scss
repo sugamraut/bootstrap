@@ -160,6 +160,7 @@
     line-height: 40px;
     font-size: 36px;
   }
+ 
   .slider-area {
     flex-direction: column-reverse;
     text-align: center;
@@ -269,12 +270,17 @@
     padding-bottom: 14px;
   }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991.98px) {
   .section-text {
     line-height: 56px;
     font-size: 42px;
     color: #263238;
   }
+      .navbar-expand-md .navbar-nav .nav-link {
+         padding-right: 0px; 
+         padding-left: 0px; 
+    }
+
   .sendButton {
     color: #ffffff;
     top: 11px;
