@@ -20,15 +20,14 @@ function LandingPage() {
 
       <Features />
 
-      <ContentCard
-        type={"caseStudy"}    />
+     <ContentCard type="case-study" />
 
       <ImpactStauts />
 
-      {/* <ContentCard
-        apiUrl={"https://landing-2vb.pages.dev/api/articlehighlight.json"}
-        type={"article"}
-      /> */}
+      <ContentCard
+       
+        type="article"
+      />
 
       <Customer />
 

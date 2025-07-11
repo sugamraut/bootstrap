@@ -9,7 +9,7 @@ import { featchCustomerAsync } from "../store/contentSlice1";
 
 function Customer() {
   const dispatch = useDispatch<AppDispatch>();
-  const { data: data, status } = useSelector(
+  const { customerdata: data, status } = useSelector(
     (state: RootState) => state.customer
   );
   useEffect(() => {

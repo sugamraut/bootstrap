@@ -6,30 +6,34 @@ import type { contentType } from "../globals/typeDeclaration";
 import { base_Url } from "../globals/api";
 
 interface customerState {
-  data: contentType | null;
+  customerdata: contentType | null;
+  casedata:contentType|null;
+  articledata:contentType|null;
   status: StatusType;
   error: string | null;
   loading: boolean;
 }
 
 const initialState: customerState = {
-  data: null,
+  customerdata: null,
   status: Status.Loading,
   error: null,
   loading: false,
+  casedata: null,
+  articledata: null
 };
 const customerSlice = createSlice({
   name: "customer",
   initialState,
   reducers: {
     setcustomer(state, action: PayloadAction<contentType>) {
-      state.data = action.payload;
+      state.customerdata = action.payload;
     },
     setCaseStudy(state, action: PayloadAction<contentType>) {
-      state.data = action.payload;
+      state.casedata = action.payload;
     },
     setarticle(state, action: PayloadAction<contentType>) {
-      state.data = action.payload;
+      state.articledata = action.payload;
     },
     setStatus(state, action: PayloadAction<StatusType>) {
       state.status = action.payload;
