@@ -20,19 +20,18 @@ function LandingPage() {
 
       <Features />
 
-     <ContentCard type="case-study" />
+      <ContentCard type="case-study" />
 
       <ImpactStauts />
 
-      <ContentCard
-       
-        type="article"
-      />
+      <ContentCard type="article" />
 
       <Customer />
 
       <Blog />
+
       <Frame />
+      
       <Footer />
     </>
   );

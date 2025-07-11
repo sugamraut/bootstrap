@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { type AppDispatch, type RootState } from "../store/store";
 import { Status } from "../globals/types";
-import { featchcontentAsync, featcharticleHighlightAsync } from "../store/contentSlice1";
+import {
+  featchcontentAsync,
+  featcharticleHighlightAsync,
+} from "../store/contentSlice1";
 
 interface IcardProps {
   type: "case-study" | "article";
@@ -15,7 +18,7 @@ const ContentCard = ({ type }: IcardProps) => {
   const { casedata, articledata, status } = useSelector(
     (state: RootState) => state.customer
   );
-  
+
   const content = type === "case-study" ? casedata : articledata;
 
   useEffect(() => {

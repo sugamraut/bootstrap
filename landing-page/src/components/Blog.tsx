@@ -1,5 +1,4 @@
-
-import { useEffect,  } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -8,20 +7,16 @@ import { useDispatch, useSelector } from "react-redux";
 import { Status } from "../globals/types";
 import { featchBlogAsync } from "../store/blogSlice";
 
-
 const Blog = () => {
-
-   const dispatch = useDispatch<AppDispatch>();
-     const { data:blog, status } = useSelector(
-    (state: RootState) => state.blogs
-  );
+  const dispatch = useDispatch<AppDispatch>();
+  const { data: blog, status } = useSelector((state: RootState) => state.blogs);
   useEffect(() => {
-      if (status === Status.Loading) {
-        dispatch(featchBlogAsync());
-      }
-    }, [dispatch, status]);
-  if (status===Status.Loading){
-     return <div>Loading...</div>;
+    if (status === Status.Loading) {
+      dispatch(featchBlogAsync());
+    }
+  }, [dispatch, status]);
+  if (status === Status.Loading) {
+    return <div>Loading...</div>;
   }
   if (status === Status.Error || !blog) {
     return <div>Failed to load .</div>;
@@ -39,7 +34,7 @@ const Blog = () => {
               <div className="card card-custom">
                 <div className="image-wrapper blog-image-wrapper">
                   <img
-                  src={`https://landing-2vb.pages.dev${article.imageUrl}`}
+                    src={`https://landing-2vb.pages.dev${article.imageUrl}`}
                     // src={article.imageUrl}
                     alt={article.ctaUrl}
                     className="img-fluid blog-image"
@@ -60,6 +55,6 @@ const Blog = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Blog;
