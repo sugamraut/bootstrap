@@ -1,6 +1,6 @@
 export const Status={
     Success:"success",
-    Loading:"Loading",
+    Loading:"loading",
     Error:"error"
 } as const
 

@@ -2,18 +2,9 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { ImpactItem } from "../globals/typeDeclaration";
 const base_Url = import.meta.env.VITE_BASE_URL;
-type ImpactItem = {
-  title: string;
-  description: string;
-  stats: {
-    value: any;
-    item: string;
-    index: number;
-    logoUrl: string;
-    label: string;
-  }[];
-};
+
 
 interface ImpactState {
   data: ImpactItem | null;

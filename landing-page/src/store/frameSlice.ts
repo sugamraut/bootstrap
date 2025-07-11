@@ -2,12 +2,10 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { FarmeItem } from "../globals/typeDeclaration";
 
 const base_Url = import.meta.env.VITE_BASE_URL;
-type FarmeItem = {
-  title: string;
-  ctaText: string;
-};
+
 interface FarmeState {
   data: FarmeItem | null;
   loading: boolean;

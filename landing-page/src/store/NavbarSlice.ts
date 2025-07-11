@@ -2,21 +2,10 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { NavItem } from "../globals/typeDeclaration";
 
 const base_Url = import.meta.env.VITE_BASE_URL;
 
-type NavItem = {
-  logoUrl: string;
-  brandName: string;
-  navigation: {
-    label: string;
-    href: string;
-  }[];
-  authActions: {
-    label: string;
-    href: string;
-  }[];
-};
 
 interface NavbarState {
   data: NavItem | null;

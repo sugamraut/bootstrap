@@ -5,7 +5,7 @@ import { type AppDispatch, type RootState } from "../store/store";
 
 import { useEffect } from "react";
 import { Status } from "../globals/types";
-import { featchCustomerAsync } from "../store/customerSlice";
+import { featchCustomerAsync } from "../store/contentSlice1";
 
 function Customer() {
   const dispatch = useDispatch<AppDispatch>();

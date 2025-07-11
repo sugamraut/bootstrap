@@ -2,16 +2,10 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { SliderItem } from "../globals/typeDeclaration";
 
 const base_Url = import.meta.env.VITE_BASE_URL;
 
-type SliderItem = {
-  title: string;
-  subtitle: string;
-  ctaText: string;
-  ctaUrl: string;
-  imageUrl: string;
-};
 
 interface SliderState {
   data: SliderItem[];

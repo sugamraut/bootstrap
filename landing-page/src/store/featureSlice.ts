@@ -2,17 +2,10 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { FeatureItem } from "../globals/typeDeclaration";
 
 const base_Url = import.meta.env.VITE_BASE_URL;
-type FeatureItem = {
-  title: string;
-  subtitle: string;
-  features: {
-    iconUrl: string;
-    title: string;
-    description: string;
-  }[];
-};
+
 
 interface FeatureState {
   data: FeatureItem | null;

@@ -3,24 +3,10 @@ import { Status, type StatusType } from "../globals/types";
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import type { footerItem } from "../globals/typeDeclaration";
 const base_Url = import.meta.env.VITE_BASE_URL;
 
-type footerItem = {
-  socialLinks: {
-    platform: string;
-    url: string;
-  }[];
-  footerNavigation: {
-    company: {
-      label: string;
-      href: string;
-    }[];
-    support: {
-      label: string;
-      href: string;
-    }[];
-  };
-};
+
 
 interface FooterState {
   data: footerItem | null;

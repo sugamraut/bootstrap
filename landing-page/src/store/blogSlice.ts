@@ -2,20 +2,10 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import { base_Url } from "../globals/api";
+import type { BlogItem } from "../globals/typeDeclaration";
 
-const base_Url = import.meta.env.VITE_BASE_URL;
-type BlogItem = {
-  title: string;
-  description: string;
-  articles: {
-    ctaText: string;
-    title: string;
-    ctaUrl: string | undefined;
-    imageUrl: string | undefined;
-    article: string;
-    index: number;
-  }[];
-};
+
 interface BlogState {
   data: BlogItem | null;
   loading: boolean;

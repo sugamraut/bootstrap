@@ -7,7 +7,7 @@ import blogSlice from "./blogSlice";
 import farmeSlice from "./frameSlice"
 import impactSlice from "./impactSlice";
 import footerSlice from "./footerSlice";
-import customerSlice from "./customerSlice";
+import customerSlice from "./contentSlice1";
 
 
 const store=configureStore({

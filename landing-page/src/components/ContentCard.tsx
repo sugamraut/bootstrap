@@ -64,12 +64,6 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
             </div>
           </>
         )}
-
-        {/* {type === "customer" && (
-          <>
-           
-          </>
-        )} */}
       </div>
     </div>
   );
