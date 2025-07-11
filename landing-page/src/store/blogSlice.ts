@@ -5,7 +5,6 @@ import axios from "axios";
 import { base_Url } from "../globals/api";
 import type { BlogItem } from "../globals/typeDeclaration";
 
-
 interface BlogState {
   data: BlogItem | null;
   loading: boolean;

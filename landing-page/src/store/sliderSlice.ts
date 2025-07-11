@@ -3,9 +3,7 @@ import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
 import type { SliderItem } from "../globals/typeDeclaration";
-
-const base_Url = import.meta.env.VITE_BASE_URL;
-
+import { base_Url } from "../globals/api";
 
 interface SliderState {
   data: SliderItem[];

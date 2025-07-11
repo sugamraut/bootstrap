@@ -2,11 +2,8 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { Status, type StatusType } from "../globals/types";
 import type { AppDispatch } from "./store";
 import axios from "axios";
+import { base_Url } from "../globals/api";
 import type { ClientStateData } from "../globals/typeDeclaration";
-
-const base_Url = import.meta.env.VITE_BASE_URL;
-
-
 
 interface ClientState {
   data: ClientStateData | null;

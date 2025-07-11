@@ -4,9 +4,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type { AppDispatch } from "./store";
 import axios from "axios";
 import type { footerItem } from "../globals/typeDeclaration";
-const base_Url = import.meta.env.VITE_BASE_URL;
-
-
+import { base_Url } from "../globals/api";
 
 interface FooterState {
   data: footerItem | null;
