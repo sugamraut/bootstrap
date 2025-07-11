@@ -7,6 +7,7 @@ import ImpactStauts from "../components/ImpactStatus";
 import Blog from "../components/Blog";
 import Frame from "../components/Frame";
 import Footer from "../components/Footer";
+import Customer from "../components/CustomerCard";
 
 function LandingPage() {
   return (
@@ -31,12 +32,7 @@ function LandingPage() {
         type={"article"}
       />
 
-      <div className="bg-light">
-        <ContentCard
-          apiUrl={"https://landing-2vb.pages.dev/api/customer.json"}
-          type={"customer"}
-        />
-      </div>
+      <Customer />
 
       <Blog />
       <Frame />

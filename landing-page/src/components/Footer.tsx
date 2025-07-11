@@ -75,7 +75,6 @@ const Footer = () => {
               })}
             </div>
           </div>
-
           <div className="col-md-12 col-lg-8 col-sm-12">
             <div className="row custom-css-for-row">
               <div className="col-md-4 col-sm-12 mb-4 text-center text-md-start">

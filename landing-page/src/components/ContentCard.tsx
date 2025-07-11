@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+
 import { Link } from "react-router-dom";
 
 type constentType = {
@@ -66,43 +65,11 @@ const ContentCard = ({ apiUrl, type }: IcardProps) => {
           </>
         )}
 
-        {type === "customer" && (
+        {/* {type === "customer" && (
           <>
-            <div className="col-md-4 col-xl-4 col-xxl-4 customer-card ">
-              <img
-                src={`https://landing-2vb.pages.dev${data.authorImageUrl}`}
-                alt={data.authorName}
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-lg-8 col-md-8  text-start customer-card ">
-              <blockquote>{data.quote}</blockquote>
-              <p>
-                <strong>{data.authorName}</strong>
-                <br />
-                {data.authorPosition}
-              </p>
-
-              <div className="d-flex flex-wrap mt-3 justify-content-between ">
-                {data.clientIcons?.map((icon, index) => (
-                  <img
-                    key={index}
-                    src={`https://landing-2vb.pages.dev${icon}`}
-                    alt={`client-logo-${index}`}
-                    className="me-3 mb-2"
-                    style={{ width: 50 }}
-                  />
-                ))}
-                <a href={data.ctaUrl} className="mouse-cursor link-design">
-                  <h6>
-                    {data.ctaText } {" "}
-                    <FontAwesomeIcon icon={faArrowRightLong} />
-                  </h6>
-                </a>
-              </div>
-            </div>
+           
           </>
-        )}
+        )} */}
       </div>
     </div>
   );

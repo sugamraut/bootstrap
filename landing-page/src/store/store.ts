@@ -7,6 +7,7 @@ import blogSlice from "./blogSlice";
 import farmeSlice from "./frameSlice"
 import impactSlice from "./impactSlice";
 import footerSlice from "./footerSlice";
+import customerSlice from "./customerSlice";
 
 
 const store=configureStore({
@@ -19,6 +20,7 @@ const store=configureStore({
         farme:farmeSlice,
         impact:impactSlice,
         footer:footerSlice,
+        customer:customerSlice,
     }
 })
 export default store

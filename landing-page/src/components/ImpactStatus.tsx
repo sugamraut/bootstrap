@@ -23,35 +23,36 @@ const ImpactStauts = () => {
   }
 
   return (
-     <div className="bg-light"><div className="container">
-      <div className="review-section row custom-css-for-row">
-        <div className="col-sm-12 col-md-6">
-          <h1 className="heading fw-semibold">{impactData.title}</h1>
-          <p className="heading-text fw-normal">{impactData.description}</p>
-        </div>
+    <div className="bg-light">
+      <div className="container">
+        <div className="review-section row custom-css-for-row">
+          <div className="col-sm-12 col-md-6">
+            <h1 className="heading fw-semibold">{impactData.title}</h1>
+            <p className="heading-text fw-normal">{impactData.description}</p>
+          </div>
 
-        <div className="col-md-6">
-          <div className="row text-center custom-css-for-row">
-            {impactData.stats.map((item, index) => (
-              <div key={index} className="col-6 col-sm-6 col-md-6 mb-4">
-                <div className="d-flex gap-2">
-                  <img
-                    src={`https://landing-2vb.pages.dev${item.logoUrl}`}
-                    className="mb-1 img-fluid impact-image-sizing"
-                    alt={item.label}
-                  />
-                  <div>
-                    {item.value.toLocaleString()}
-                    <p>{item.label}</p>
+          <div className="col-md-6">
+            <div className="row text-center custom-css-for-row">
+              {impactData.stats.map((item, index) => (
+                <div key={index} className="col-6 col-sm-6 col-md-6 mb-4">
+                  <div className="d-flex gap-2">
+                    <img
+                      src={`https://landing-2vb.pages.dev${item.logoUrl}`}
+                      className="mb-1 img-fluid impact-image-sizing"
+                      alt={item.label}
+                    />
+                    <div>
+                      {item.value.toLocaleString()}
+                      <p>{item.label}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div></div>
-    
+    </div>
   );
 };
 
